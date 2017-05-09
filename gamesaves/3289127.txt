@@ -1,0 +1,272 @@
+Game #3289127, unrated.
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 4 Coppers and an Estate.
+L starts with 7 Coppers and 3 Estates.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 1 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Moneylender.
+N draws 3 Coppers and 2 Estates.
+
+Turn 1 - Lord Rattington
+L plays 3 Coppers.
+L buys and gains a Chapel.
+L draws 5 cards.
+
+Turn 2 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Silver.
+N shuffles their deck.
+N draws 4 Coppers and a Silver.
+
+Turn 2 - Lord Rattington
+L plays 4 Coppers.
+L buys and gains a Militia.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 3 - NiRuaG
+N plays 4 Coppers and a Silver.
+N buys and gains a Gold.
+N draws 3 Coppers, an Estate and a Moneylender.
+
+Turn 3 - Lord Rattington
+L plays 3 Coppers.
+L buys and gains a Silver.
+L draws 5 cards.
+
+Turn 4 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays 2 Coppers.
+N buys and gains a Laboratory.
+N shuffles their deck.
+N draws 2 Coppers and 3 Estates.
+
+Turn 4 - Lord Rattington
+L plays a Militia.
+N discards 2 Estates.
+L plays 3 Coppers.
+L buys and gains a Laboratory.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 5 - NiRuaG
+N plays 2 Coppers.
+N buys and gains a Moat.
+N draws 2 Coppers, a Gold, a Laboratory and a Moneylender.
+
+Turn 5 - Lord Rattington
+L plays a Militia.
+N discards 2 Coppers.
+L plays 2 Coppers and a Silver.
+L buys and gains a Gold.
+L draws 5 cards.
+
+Turn 6 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Silver.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver and a Gold.
+N buys and gains a Province.
+N shuffles their deck.
+N draws 3 Coppers and 2 Estates.
+
+Turn 6 - Lord Rattington
+L plays 5 Coppers.
+L buys and gains a Laboratory.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 7 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Moat.
+N draws a Silver, a Gold, an Estate, a Laboratory and a Moneylender.
+
+Turn 7 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays 3 Coppers.
+L buys and gains a Silver.
+L draws 5 cards.
+
+Turn 8 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Province.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver and a Gold.
+N buys and gains a Province.
+N shuffles their deck.
+N draws a Copper, 2 Estates, a Laboratory and a Moat.
+
+Turn 8 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays a Militia.
+N reacts with a Moat.
+L plays 3 Coppers, a Silver and a Gold.
+L buys and gains a Gold.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 9 - NiRuaG
+N plays a Laboratory.
+N draws a Silver and a Province.
+N plays a Moat.
+N draws a Copper and a Moat.
+N plays 2 Coppers and a Silver.
+N buys and gains a Poacher.
+N draws 2 Coppers, a Gold, a Province and a Moneylender.
+
+Turn 9 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays a Chapel.
+L trashes a Copper and an Estate.
+L plays 2 Silvers and a Gold.
+L buys and gains a Gold.
+L draws 5 cards.
+
+Turn 10 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Copper and a Gold.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws a Copper, a Silver, an Estate, a Moat and a Poacher.
+
+Turn 10 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays 5 Coppers.
+L buys and gains a Library.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 11 - NiRuaG
+N plays a Poacher.
+N draws a Copper.
+N plays a Moat.
+N draws a Moat and a Moneylender.
+N plays 2 Coppers and a Silver.
+N buys and gains a Market.
+N draws a Copper, 2 Golds and 2 Provinces.
+
+Turn 11 - Lord Rattington
+L plays a Militia.
+N discards 2 Provinces.
+L plays a Copper, a Silver and a Gold.
+L buys and gains a Province.
+L draws 5 cards.
+
+Turn 12 - NiRuaG
+N plays a Copper and 2 Golds.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 3 Estates, a Laboratory and a Market.
+
+Turn 12 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays a Laboratory.
+L draws 2 cards.
+L plays a Library.
+L draws a card.
+L plays 5 Coppers.
+L buys and gains a Laboratory.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 13 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Gold.
+N plays a Market.
+N draws a Copper.
+N plays 2 Coppers and a Gold.
+N buys and gains a Cellar and a Poacher.
+N draws a Silver, a Gold, a Province, a Moat and a Poacher.
+
+Turn 13 - Lord Rattington
+L plays a Copper, a Silver and 2 Golds.
+L buys and gains a Province.
+L draws 5 cards.
+
+Turn 14 - NiRuaG
+N plays a Poacher.
+N draws a Copper.
+N plays a Moat.
+N draws a Province and a Moneylender.
+N plays a Copper, a Silver and a Gold.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 2 Golds, 2 Estates and a Moat.
+
+Turn 14 - Lord Rattington
+L plays a Library.
+L draws 3 cards.
+L plays 2 Coppers and a Silver.
+L buys and gains a Gardens.
+L draws 5 cards.
+
+Turn 15 - NiRuaG
+N plays a Moat.
+N draws a Copper and an Estate.
+N plays a Copper and 2 Golds.
+N buys and gains a Duchy.
+N draws a Copper, a Gold, a Cellar, a Moat and a Poacher.
+
+Turn 15 - Lord Rattington
+L plays a Chapel.
+L trashes 2 Coppers and an Estate.
+L plays a Gold.
+L buys and gains a Silver.
+L shuffles their deck.
+L draws 5 cards.
+
+Turn 16 - NiRuaG
+N plays a Poacher.
+N draws a Market.
+N plays a Market.
+N draws a Gold.
+N plays a Cellar.
+N discards a Copper.
+N draws a Poacher.
+N plays a Poacher.
+N draws a Province.
+N plays a Moat.
+N draws a Copper and a Laboratory.
+N plays a Copper and 2 Golds.
+N buys and gains an Estate and a Province.
+N shuffles their deck.
+N draws a Copper, a Silver, 2 Provinces and a Moneylender.
+
+Turn 16 - Lord Rattington
+L plays a Laboratory.
+L draws 2 cards.
+L plays 2 Coppers, 2 Silvers and a Gold.
+L buys and gains a Province.
+L draws 5 cards.
+
+Turn 17 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver.
+N buys and gains a Duchy.
+N draws 2 Coppers and 3 Golds.
+
+Turn 17 - Lord Rattington
+L plays a Chapel.
+L trashes a Copper.
+L plays a Silver and 2 Golds.
+L buys and gains a Province.
+L draws 5 cards.
+
+Turn 18 - NiRuaG
+N plays 2 Coppers and 3 Golds.
+N buys and gains a Province.
+N draws 2 Estates, a Duchy, a Province and a Poacher.
