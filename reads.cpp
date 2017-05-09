@@ -162,7 +162,7 @@ namespace dominion {
         using std::endl;
         using std::setw;
         using std::left;
-       
+
         string line;
         while (read_line(f, line)) {
             stringstream linestream(line);
@@ -183,10 +183,11 @@ namespace dominion {
             // else
             parse_players_turn(linestream, g.players_by_name[tok_first]);
 
-        for (const auto& i : counts)
-            cout << setw(20) << left << i.first << " " << i.second << endl;
+            for (const auto& i : counts)
+                cout << setw(20) << left << i.first << " " << i.second << endl;
 
-        return;
+            return;
+        }
     }
 }
 
