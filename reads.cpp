@@ -13,6 +13,7 @@
 namespace dominion {
     std::map<std::string, unsigned short> counts{};
 
+    // getline function that excludes period character at end of line
     auto read_line(std::istream& f, std::string& s) -> decltype(std::getline(f, s)) {
         auto& ret = std::getline(f, s);
         if (!s.empty() && s.back() == '.')
@@ -74,6 +75,77 @@ namespace dominion {
         /// recognize player identifying characters
         return;
     }
+    
+    tokens parse_verb(std::istream& istr) {
+        std::string verb;
+        istr >> verb;
+        auto verb_find = tokens_map.find(verb);
+        if (verb_find != tokens_map.end())
+        {
+            if (verb_find->second == tokens::Buy) {
+                std::string t1, t2;
+                istr >> t1 >> t2; /// !this is destructive
+                if (t1 == "and" && t2 == "gains")
+                {
+                    ++counts["buys and gains"];
+                }
+                else
+                {
+                    std::cerr << "!BUYS, but not \"and gains\"";
+                    std::cin.get();
+                    throw;
+                }
+            }
+
+            return verb_find->second;
+        }
+
+        std::cerr << "couldnt find verb: [" << verb << "]";
+        std::cout << 
+        std::cin.get();
+        throw;
+    }
+
+    std::vector<std::pair<tokens, unsigned short>> parse_cards(std::istream& istr) {
+        std::vector<std::pair<tokens, unsigned short>> cards{};
+
+        std::string str;
+        while (istr >> str)
+        {
+            if (str == "and" || str == "their" || str == "with")
+                continue; // get next token
+
+            unsigned short num;
+            // number part of pair
+            if (str == "a" || str == "an"){
+                num = 1;
+            }
+            else
+            {
+                if (tokens_map.count(str) == 0)
+                {
+                    unsigned short i;
+                    try {
+                        i = stoi(str);
+                    }
+                    catch (...) {
+                        std::cout << "caught stoi exception on string: " << str << std::endl;
+                        std::cin.get();
+                        i = 0;
+                    }
+                }
+            }
+
+            // card part of pair
+            std::string str_card;
+
+            // ignore ',' as final character
+            if (!str_card.empty() && str_card.back() == ',')
+                str_card.pop_back();
+
+
+        }
+    }
 
     void parse_players_turn(std::istream& istr, player_struct player) {
         using std::string;
@@ -81,76 +153,24 @@ namespace dominion {
         using std::endl;
 
         // next token should be a (set of) verb(s)
-        string tok_verb;
-        istr >> tok_verb;
-        auto vf = tokens_map.find(tok_verb);
-        if (vf != tokens_map.end())
-        {
-            switch (vf->second)
-            {
-            case tokens::Buy: {
-                string t1, t2;
-                istr >> t1 >> t2;
-                if (t1 == "and" && t2 == "gains")
-                {
-                    ++counts["buys and gains"];
-                }
-                else
-                {
-                    std::cerr << "BUYS, but not \"and gains\"";
-                    return;
-                }
-            }break;
-
-            case tokens::Trash: {
-                ++counts[tok_verb];
-            }break;
-
-            default:
-                ;
-            }
+        tokens verb;
+        try{
+            verb = parse_verb(istr);
         }
-
-
-        // rest of line
-        string tok;
-        while (istr >> tok) {
-
-            if (tok == "a" || tok == "an")
-                continue; // get next token
-
-                          ///"and" should set a *flag*
-            if (tok == "and" || tok == "their" || tok == "with")
-                continue; // get next token
-
-                          // ignore punctuation as final character, and proceed to process as standard token
-            if (tok.back() == '.' || tok.back() == ',')
-                tok.pop_back();
-
-            if (tokens_map.count(tok) == 0)
-            {
-                try {
-                    auto i = stoi(tok);
-                }
-                catch (...) {
-                    cout << tok << endl;
-                    //cin.get();
-                }
-            }
-            else
-            {
-                ++counts[tok];
-                switch (tokens_map.at(tok))
-                {
-                case tokens::Estate:
-                {
-
-                }break;
-                default:
-                    ;
-                }
-            }
-
+        catch (...)
+        {
+            std::cout << "\b! caught parse_verb exception";
+            std::cin.get();
+        }
+        
+        // rest of line is set of cards, with 
+        std::vector<std::pair<tokens, unsigned short>> cards{};
+        try{
+            cards = parse_cards(istr);
+        }
+        catch (...){
+            std::cout << "\b! caught parse_cards exception";
+            std::cin.get();
         }
     }
 
@@ -165,6 +185,12 @@ namespace dominion {
 
         string line;
         while (read_line(f, line)) {
+            if (!line.size()) // skip blank lines between turns
+                continue;
+            //cout << line.size() << ": " << line << endl;
+            //std::cin.get();
+
+
             stringstream linestream(line);
 
             string tok_first;
@@ -182,12 +208,12 @@ namespace dominion {
             }
             // else
             parse_players_turn(linestream, g.players_by_name[tok_first]);
-
-            for (const auto& i : counts)
-                cout << setw(20) << left << i.first << " " << i.second << endl;
-
-            return;
         }
+
+        for (const auto& i : counts)
+            cout << setw(20) << left << i.first << " " << i.second << endl;
+
+        return;
     }
 }
 

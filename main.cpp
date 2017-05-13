@@ -47,6 +47,7 @@ void print_summary() {
             cout << '\t' << setw(20) << c.first << " " << c.second << endl;
         }
     }
+
     return;
 }
 

@@ -10,5 +10,5 @@ struct player_struct {
 struct game_struct {
     unsigned int game_number = -1;
     typedef std::map<std::string, player_struct> map_str_players;
-    map_str_players players_by_name{};
+    map_str_players players_by_name;
 };
