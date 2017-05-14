@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <regex>
+#include <algorithm>
 
 #include "consts.h"
 #include "structs.h"
@@ -13,7 +13,7 @@
 namespace dominion {
     std::map<std::string, unsigned short> counts{};
 
-    // getline function that excludes period character at end of line
+    // getline function that excludes period '.' character at end of line
     auto read_line(std::istream& f, std::string& s) -> decltype(std::getline(f, s)) {
         auto& ret = std::getline(f, s);
         if (!s.empty() && s.back() == '.')
@@ -38,7 +38,7 @@ namespace dominion {
             >> rs.cardamt >> rs.tok_card;   // 7 Coppers
 
         pmap[rs.player_name]
-            .cards_in_deck[rs.tok_card]
+            .cards_in_deck[tokens_map.at(rs.tok_card)]
             = rs.cardamt;
 
         istr
@@ -47,7 +47,7 @@ namespace dominion {
             ;
 
         pmap[rs.player_name]
-            .cards_in_deck[rs.tok_card]
+            .cards_in_deck[tokens_map.at(rs.tok_card)]
             = rs.cardamt;
 
         return;
@@ -91,63 +91,102 @@ namespace dominion {
                 }
                 else
                 {
-                    std::cerr << "!BUYS, but not \"and gains\"";
+                    std::cerr << "\b! BUYS, but not \"and gains\"";
                     std::cin.get();
-                    throw;
                 }
             }
 
+            if (verb_find->second == tokens::React) {
+                std::string t;
+                istr >> t; ///! destructive
+                if (t == "with")
+                    ++counts["reacts with"];
+                else
+                {
+                    std::cerr << "\b! REACTS, but not \"with\"";
+                    std::cin.get();
+                }
+            }
+
+            ++counts[verb_find->first];
             return verb_find->second;
         }
 
-        std::cerr << "couldnt find verb: [" << verb << "]";
-        std::cout << 
+        std::cerr << "couldnt find verb for: [" << verb << "]";
         std::cin.get();
         throw;
     }
 
-    std::vector<std::pair<tokens, unsigned short>> parse_cards(std::istream& istr) {
-        std::vector<std::pair<tokens, unsigned short>> cards{};
+    unsigned short parse_card_num(std::string& str)
+    {
+        if (str == "a" || str == "an"){
+            return 1;
+        }
+        //else
+        unsigned short i;
+        try {
+            i = stoi(str);
+        }
+        catch (...) {
+            std::cout << "caught exception from stoi on string: " << str << std::endl;
+            std::cin.get();
+            i = 0;
+        }
+        return i;
+    }
+
+    std::map<tokens, unsigned short> parse_cards(std::istream& istr) {
+        std::map<tokens, unsigned short> cards;
 
         std::string str;
         while (istr >> str)
         {
-            if (str == "and" || str == "their" || str == "with")
+            if (str == "and")
                 continue; // get next token
 
-            unsigned short num;
             // number part of pair
-            if (str == "a" || str == "an"){
-                num = 1;
-            }
-            else
-            {
-                if (tokens_map.count(str) == 0)
-                {
-                    unsigned short i;
-                    try {
-                        i = stoi(str);
-                    }
-                    catch (...) {
-                        std::cout << "caught stoi exception on string: " << str << std::endl;
-                        std::cin.get();
-                        i = 0;
-                    }
-                }
-            }
-
+            unsigned short num = parse_card_num(str);
+            
             // card part of pair
+            tokens card;
             std::string str_card;
-
+            istr >> str_card;
             // ignore ',' as final character
             if (!str_card.empty() && str_card.back() == ',')
                 str_card.pop_back();
 
+            auto card_find = tokens_map.find(str_card);
+            if (card_find != tokens_map.end())
+            {
+                ++counts[card_find->first];
+                card = card_find->second;
+            }
+            else
+            {
+                std::cerr << "\b! couldnt find card: [" << str_card<< "]";
+                std::cin.get();
+                throw;
+            }
 
+            ///DEBUG
+            //std::cout
+            //    << card_find->first << ": (int)" << (int)card
+            //    << "\t # " << num << std::endl;
+            //std::cin.get();
+
+            cards[card] = num;
         }
+
+        ///DEBUG
+        /*for (auto const& i : cards){
+            std::cout << (int)i.first << ": " << i.second << std::endl;
+        }
+        std::cin.get();*/
+
+        return cards;
     }
 
-    void parse_players_turn(std::istream& istr, player_struct player) {
+    void parse_line_players_turn(std::istream& istr, player_struct& player) {
         using std::string;
         using std::cout;
         using std::endl;
@@ -163,14 +202,29 @@ namespace dominion {
             std::cin.get();
         }
         
-        // rest of line is set of cards, with 
-        std::vector<std::pair<tokens, unsigned short>> cards{};
+        if (verb == tokens::Shuffle)
+            return; //ennd of line is ".. shuffles their deck"
+
+        // rest of line is set of cards
+        decltype(parse_cards(istr)) cards;
         try{
             cards = parse_cards(istr);
         }
         catch (...){
             std::cout << "\b! caught parse_cards exception";
             std::cin.get();
+        }
+
+        if (verb == tokens::Buy){
+            auto find = cards.find(tokens::Estate);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Estate] += find->second;
+            find = cards.find(tokens::Duchy);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Duchy] += find->second;
+            find = cards.find(tokens::Province);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Province] += find->second;
         }
     }
 
@@ -185,9 +239,11 @@ namespace dominion {
 
         string line;
         while (read_line(f, line)) {
-            if (!line.size()) // skip blank lines between turns
+            if (line.empty()) // skip the blank lines that occur between turns
                 continue;
-            //cout << line.size() << ": " << line << endl;
+
+            ///DEBUG line
+            cout << line << endl;
             //std::cin.get();
 
 
@@ -207,7 +263,7 @@ namespace dominion {
                 continue;
             }
             // else
-            parse_players_turn(linestream, g.players_by_name[tok_first]);
+            parse_line_players_turn(linestream, g.players_by_name[tok_first]);
         }
 
         for (const auto& i : counts)
