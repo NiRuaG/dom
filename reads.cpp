@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <regex>
+#include <algorithm>
 
 #include "consts.h"
 #include "structs.h"
@@ -13,6 +13,7 @@
 namespace dominion {
     std::map<std::string, unsigned short> counts{};
 
+    // getline function that excludes period '.' character at end of line
     auto read_line(std::istream& f, std::string& s) -> decltype(std::getline(f, s)) {
         auto& ret = std::getline(f, s);
         if (!s.empty() && s.back() == '.')
@@ -37,7 +38,7 @@ namespace dominion {
             >> rs.cardamt >> rs.tok_card;   // 7 Coppers
 
         pmap[rs.player_name]
-            .cards_in_deck[rs.tok_card]
+            .cards_in_deck[tokens_map.at(rs.tok_card)]
             = rs.cardamt;
 
         istr
@@ -46,7 +47,7 @@ namespace dominion {
             ;
 
         pmap[rs.player_name]
-            .cards_in_deck[rs.tok_card]
+            .cards_in_deck[tokens_map.at(rs.tok_card)]
             = rs.cardamt;
 
         return;
@@ -74,83 +75,156 @@ namespace dominion {
         /// recognize player identifying characters
         return;
     }
-
-    void parse_players_turn(std::istream& istr, player_struct player) {
-        using std::string;
-        using std::cout;
-        using std::endl;
-
-        // next token should be a (set of) verb(s)
-        string tok_verb;
-        istr >> tok_verb;
-        auto vf = tokens_map.find(tok_verb);
-        if (vf != tokens_map.end())
+    
+    tokens parse_verb(std::istream& istr) {
+        std::string verb;
+        istr >> verb;
+        auto verb_find = tokens_map.find(verb);
+        if (verb_find != tokens_map.end())
         {
-            switch (vf->second)
-            {
-            case tokens::Buy: {
-                string t1, t2;
-                istr >> t1 >> t2;
+            if (verb_find->second == tokens::Buy) {
+                std::string t1, t2;
+                istr >> t1 >> t2; /// !this is destructive
                 if (t1 == "and" && t2 == "gains")
                 {
                     ++counts["buys and gains"];
                 }
                 else
                 {
-                    std::cerr << "BUYS, but not \"and gains\"";
-                    return;
+                    std::cerr << "\b! BUYS, but not \"and gains\"";
+                    std::cin.get();
                 }
-            }break;
-
-            case tokens::Trash: {
-                ++counts[tok_verb];
-            }break;
-
-            default:
-                ;
             }
+
+            if (verb_find->second == tokens::React) {
+                std::string t;
+                istr >> t; ///! destructive
+                if (t == "with")
+                    ++counts["reacts with"];
+                else
+                {
+                    std::cerr << "\b! REACTS, but not \"with\"";
+                    std::cin.get();
+                }
+            }
+
+            ++counts[verb_find->first];
+            return verb_find->second;
         }
 
+        std::cerr << "couldnt find verb for: [" << verb << "]";
+        std::cin.get();
+        throw;
+    }
 
-        // rest of line
-        string tok;
-        while (istr >> tok) {
+    unsigned short parse_card_num(std::string& str)
+    {
+        if (str == "a" || str == "an"){
+            return 1;
+        }
+        //else
+        unsigned short i;
+        try {
+            i = stoi(str);
+        }
+        catch (...) {
+            std::cout << "caught exception from stoi on string: " << str << std::endl;
+            std::cin.get();
+            i = 0;
+        }
+        return i;
+    }
 
-            if (tok == "a" || tok == "an")
+    std::map<tokens, unsigned short> parse_cards(std::istream& istr) {
+        std::map<tokens, unsigned short> cards;
+
+        std::string str;
+        while (istr >> str)
+        {
+            if (str == "and")
                 continue; // get next token
 
-                          ///"and" should set a *flag*
-            if (tok == "and" || tok == "their" || tok == "with")
-                continue; // get next token
+            // number part of pair
+            unsigned short num = parse_card_num(str);
+            
+            // card part of pair
+            tokens card;
+            std::string str_card;
+            istr >> str_card;
+            // ignore ',' as final character
+            if (!str_card.empty() && str_card.back() == ',')
+                str_card.pop_back();
 
-                          // ignore punctuation as final character, and proceed to process as standard token
-            if (tok.back() == '.' || tok.back() == ',')
-                tok.pop_back();
-
-            if (tokens_map.count(tok) == 0)
+            auto card_find = tokens_map.find(str_card);
+            if (card_find != tokens_map.end())
             {
-                try {
-                    auto i = stoi(tok);
-                }
-                catch (...) {
-                    cout << tok << endl;
-                    //cin.get();
-                }
+                ++counts[card_find->first];
+                card = card_find->second;
             }
             else
             {
-                ++counts[tok];
-                switch (tokens_map.at(tok))
-                {
-                case tokens::Estate:
-                {
-
-                }break;
-                default:
-                    ;
-                }
+                std::cerr << "\b! couldnt find card: [" << str_card<< "]";
+                std::cin.get();
+                throw;
             }
 
+            ///DEBUG
+            //std::cout
+            //    << card_find->first << ": (int)" << (int)card
+            //    << "\t # " << num << std::endl;
+            //std::cin.get();
+
+            cards[card] = num;
+        }
+
+        ///DEBUG
+        /*for (auto const& i : cards){
+            std::cout << (int)i.first << ": " << i.second << std::endl;
+        }
+        std::cin.get();*/
+
+        return cards;
+    }
+
+    void parse_line_players_turn(std::istream& istr, player_struct& player) {
+        using std::string;
+        using std::cout;
+        using std::endl;
+
+        // next token should be a (set of) verb(s)
+        tokens verb;
+        try{
+            verb = parse_verb(istr);
+        }
+        catch (...)
+        {
+            std::cout << "\b! caught parse_verb exception";
+            std::cin.get();
+        }
+        
+        if (verb == tokens::Shuffle)
+            return; //ennd of line is ".. shuffles their deck"
+
+        // rest of line is set of cards
+        decltype(parse_cards(istr)) cards;
+        try{
+            cards = parse_cards(istr);
+        }
+        catch (...){
+            std::cout << "\b! caught parse_cards exception";
+            std::cin.get();
+        }
+
+        if (verb == tokens::Buy){
+            auto find = cards.find(tokens::Estate);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Estate] += find->second;
+            find = cards.find(tokens::Duchy);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Duchy] += find->second;
+            find = cards.find(tokens::Province);
+            if (find != cards.end())
+                player.cards_in_deck[tokens::Province] += find->second;
         }
     }
 
@@ -165,6 +239,14 @@ namespace dominion {
 
         string line;
         while (read_line(f, line)) {
+            if (line.empty()) // skip the blank lines that occur between turns
+                continue;
+
+            ///DEBUG line
+            cout << line << endl;
+            //std::cin.get();
+
+
             stringstream linestream(line);
 
             string tok_first;
@@ -181,13 +263,13 @@ namespace dominion {
                 continue;
             }
             // else
-            parse_players_turn(linestream, g.players_by_name[tok_first]);
-
-            for (const auto& i : counts)
-                cout << setw(20) << left << i.first << " " << i.second << endl;
-
-            return;
+            parse_line_players_turn(linestream, g.players_by_name[tok_first]);
         }
+
+        for (const auto& i : counts)
+            cout << setw(20) << left << i.first << " " << i.second << endl;
+
+        return;
     }
 }
 
