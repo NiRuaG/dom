@@ -12,20 +12,16 @@ using std::ifstream;
 using std::string;
 #include <sstream>
 using std::stringstream;
-
+// project headers
 #include "structs.h"
 #include "consts.h"
+#include "reads.h"
 
-
-const auto FILE_NAME_PATH = R"(.\gamesaves\3289127.txt)";
+const auto FILE_NAME_PATH = R"(.\gamesaves\3284021.txt)";
 
 
 game_struct THE_GAME;
 
-namespace dominion {
-    void read_startofgame(ifstream&, game_struct&);
-    void read_restofgame (ifstream&, game_struct&);
-}
 
 void print_summary() {
     cout << "\nNumber of Turns\n";
@@ -44,7 +40,7 @@ void print_summary() {
         cout << setw(20) << cut_name << endl;
         for (auto const& c : p.second.cards_in_deck)
         {
-            cout << '\t' << setw(20) << (int)c.first << " " << c.second << endl;
+            cout << '\t' << setw(20) << dominion::tokens_map.right.at(c.first) << " " << c.second << endl;
         }
     }
 
