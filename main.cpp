@@ -40,7 +40,7 @@ void print_summary() {
         cout << setw(20) << cut_name << endl;
         for (auto const& c : p.second.cards_in_deck)
         {
-            cout << '\t' << setw(20) << dominion::tokens_map.right.at(c.first) << " " << c.second << endl;
+            cout << '\t' << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second << endl;
         }
     }
 

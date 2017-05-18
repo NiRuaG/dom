@@ -1,12 +1,6 @@
 #include <iostream>
-#include <iomanip>
-#include <istream>
-#include <string>
 #include <sstream>
-#include <algorithm>
-
-#include "consts.h"
-#include "structs.h"
+#include <iomanip>
 #include "reads.h"
 
 namespace dominion {
@@ -43,6 +37,7 @@ namespace dominion {
         /// recognize player identifying characters
         return;
     }
+
     void read_restofgame(std::istream& strm, game_struct& g) {
         using std::string;
         using std::map;
@@ -103,7 +98,7 @@ namespace dominion {
             std::cin.get();
         }
 
-        if (verb == tokens::Shuffle)
+        if (verb == verb_tokens::Shuffle)
             return; //ennd of line is ".. shuffles their deck"
 
                     // rest of line is set of cards
@@ -116,51 +111,30 @@ namespace dominion {
             std::cin.get();
         }
 
-        if (verb == tokens::Starts) {
-            auto find = cards.find(tokens::Estate);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Estate] = find->second;
-            find = cards.find(tokens::Duchy);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Duchy] = find->second;
-            find = cards.find(tokens::Province);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Province] = find->second;
+        if (verb == verb_tokens::Starts) {
+            for(auto const&c : cards)
+                player.cards_in_deck[c.second] = c.first;
         }
-        if (verb == tokens::Buy) {
-            auto find = cards.find(tokens::Estate);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Estate] += find->second;
-            find = cards.find(tokens::Duchy);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Duchy] += find->second;
-            find = cards.find(tokens::Province);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Province] += find->second;
+        if (verb == verb_tokens::Buy || verb== verb_tokens::Gain) {
+            for (auto const&c : cards)
+                player.cards_in_deck[c.second] += c.first;
         }
-        if (verb == tokens::Trash) {
-            auto find = cards.find(tokens::Estate);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Estate] -= find->second;
-            find = cards.find(tokens::Duchy);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Duchy] -= find->second;
-            find = cards.find(tokens::Province);
-            if (find != cards.end())
-                player.cards_in_deck[tokens::Province] -= find->second;
+        if (verb == verb_tokens::Trash) {
+            for (auto const&c : cards)
+                player.cards_in_deck[c.second] -= c.first;
         }
     }
     
-    tokens parse_verb(std::istream& strm) {
+    verb_tokens parse_verb(std::istream& strm) {
         std::string verb;
         strm >> verb;
-        auto verb_find = tokens_map.left.find(verb);
-        if (verb_find != tokens_map.left.end())
+        auto verb_find = verb_tokens_map.left.find(verb);
+        if (verb_find != verb_tokens_map.left.end())
         {
             // special verb cases
             switch (verb_find->second)
             {
-            case tokens::Buy: {
+            case verb_tokens::Buy: {
                 std::string t1, t2;
                 strm >> t1 >> t2; /// !this is destructive
                 if (t1 == "and" && t2 == "gains")
@@ -174,7 +148,7 @@ namespace dominion {
                 }
             }break;
 
-            case tokens::React: {
+            case verb_tokens::React: {
                 std::string t;
                 strm >> t; ///! destructive
                 if (t == "with")
@@ -186,7 +160,7 @@ namespace dominion {
                 }
             }break;
 
-            case tokens::Starts: {
+            case verb_tokens::Starts: {
                 std::string t;
                 strm >> t; /// destructive
                 if (t == "with")
@@ -210,36 +184,33 @@ namespace dominion {
         throw;
     }
 
-    std::map<tokens, unsigned short> parse_cards(std::istream& istr) {
-        std::map<tokens, unsigned short> cards;
+    using pair_card_num = std::pair<unsigned short, card_tokens>;
+    std::vector<pair_card_num> parse_cards(std::istream& istr) {
+        decltype(parse_cards(istr)) cards;
 
         std::string str;
-        while (istr >> str)
+        while (istr >> str && str != "and") // "and" continues to proceed
         {
-            if (str == "and")
-                continue; // get next token
+            //1. number part of pair
+            auto num = parse_card_num(str);
 
-                          // number part of pair
-            unsigned short num = parse_card_num(str);
-
-            // card part of pair
-            tokens card;
+            //2. card part of pair
             std::string str_card;
             istr >> str_card;
             // ignore ',' as final character
             if (!str_card.empty() && str_card.back() == ',')
                 str_card.pop_back();
-
             // singular-ize
             auto sing_find = singular.find(str_card);
             if (sing_find != singular.end())
-                str_card = singular.at(str_card);
-
-            auto card_find = tokens_map.left.find(str_card);
-            if (card_find != tokens_map.left.end())
+                str_card = sing_find->second;
+            // get card token
+            auto card_find = card_tokens_map.left.find(str_card);
+            if (card_find != card_tokens_map.left.end())
             {
                 ++counts[card_find->first];
-                card = card_find->second;
+                //3. append the <num,card> pair to return
+                cards.emplace_back(num, card_find->second);
             }
             else
             {
@@ -247,21 +218,7 @@ namespace dominion {
                 std::cin.get();
                 throw;
             }
-
-            ///DEBUG
-            //std::cout
-            //    << card_find->first << ": (int)" << (int)card
-            //    << "\t # " << num << std::endl;
-            //std::cin.get();
-
-            cards[card] = num;
         }
-
-        ///DEBUG
-        /*for (auto const& i : cards){
-        std::cout << (int)i.first << ": " << i.second << std::endl;
-        }
-        std::cin.get();*/
 
         return cards;
     }

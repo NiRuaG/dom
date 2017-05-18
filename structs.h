@@ -4,7 +4,7 @@
 
 struct player_struct {
     unsigned int num_turns = 0;
-    typedef std::map<dominion::tokens, unsigned short> map_str_card_amt;
+    typedef std::map<dominion::card_tokens, unsigned short> map_str_card_amt;
     map_str_card_amt cards_in_deck;
 };
 

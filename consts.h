@@ -5,7 +5,7 @@
 
 
 namespace dominion {
-    enum class tokens {
+    enum class card_tokens {
         // Cards
         Copper,
         Silver,
@@ -32,7 +32,12 @@ namespace dominion {
         Remodel,
         Sentry,
         Smithy,
-    
+
+        // Objects
+        Card
+    };
+
+    enum class verb_tokens {
         // Verbs
         Buy,
         Discard,
@@ -45,11 +50,10 @@ namespace dominion {
         Starts,
         Topdeck,
         Trash,
-
-        // Objects
-        Deck,
-        Card,
     };
+
+    // object token, unused?
+    // Deck
 
 
     static const std::map<std::string, std::string> singular
@@ -80,52 +84,59 @@ namespace dominion {
         { "cards"       , "card"       },
     };
 
-    using token_bimapT = boost::bimap<std::string, tokens>;
-    token_bimapT makeBimap(std::initializer_list<token_bimapT::value_type>);
+    template <typename T>
+    using token_bimap = boost::bimap<std::string, T>;
 
-    static const token_bimapT tokens_map = makeBimap(
+    template <typename T>
+    token_bimap<T> makeBimap(std::initializer_list<typename token_bimap<T>::value_type>);
+
+
+    static const auto card_tokens_map = makeBimap<card_tokens>(
     {
-        { "Copper", tokens::Copper },
-        { "Silver", tokens::Silver },
-        { "Gold"  , tokens::Gold   },
+        { "card", card_tokens::Card },
 
-        { "Estate"  , tokens::Estate   },
-        { "Duchy"   , tokens::Duchy    },
-        { "Province", tokens::Province },
-        { "Gardens" , tokens::Gardens  },
+        { "Copper", card_tokens::Copper },
+        { "Silver", card_tokens::Silver },
+        { "Gold"  , card_tokens::Gold   },
 
-        { "Bandit"     , tokens::Bandit      },
-        { "Bureaucrat" , tokens::Bureaucrat  },
-        { "Cellar"     , tokens::Cellar      },
-        { "Chapel"     , tokens::Chapel      },
-        { "Festival"   , tokens::Festival    },
-        { "Laboratory" , tokens::Laboratory  },
-        { "Library"    , tokens::Library     },
-        { "Market"     , tokens::Market      },
-        { "Merchant"   , tokens::Merchant    },
-        { "Militia"    , tokens::Militia     },
-        { "Moat"       , tokens::Moat        },
-        { "Moneylender", tokens::Moneylender },
-        { "Poacher"    , tokens::Poacher     },
-        { "Remodel"    , tokens::Remodel     },
-        { "Sentry"     , tokens::Sentry      },
-        { "Smithy"     , tokens::Smithy      },
+        { "Estate"  , card_tokens::Estate   },
+        { "Duchy"   , card_tokens::Duchy    },
+        { "Province", card_tokens::Province },
+        { "Gardens" , card_tokens::Gardens  },
 
-        // Verbs
-        { "buys"    , tokens::Buy     },
-        { "discards", tokens::Discard },
-        { "draws"   , tokens::Draw    },
-        { "gains"   , tokens::Gain    },
-        { "plays"   , tokens::Play    },
-        { "reacts"  , tokens::React   },
-        { "reveals" , tokens::Reveal  },
-        { "shuffles", tokens::Shuffle },
-        { "starts"  , tokens::Starts  },
-        { "topdecks", tokens::Topdeck },
-        { "trashes" , tokens::Trash   },
-
-        // Objects
-        { "deck", tokens::Deck },
-        { "card", tokens::Card },
+        { "Bandit"     , card_tokens::Bandit      },
+        { "Bureaucrat" , card_tokens::Bureaucrat  },
+        { "Cellar"     , card_tokens::Cellar      },
+        { "Chapel"     , card_tokens::Chapel      },
+        { "Festival"   , card_tokens::Festival    },
+        { "Laboratory" , card_tokens::Laboratory  },
+        { "Library"    , card_tokens::Library     },
+        { "Market"     , card_tokens::Market      },
+        { "Merchant"   , card_tokens::Merchant    },
+        { "Militia"    , card_tokens::Militia     },
+        { "Moat"       , card_tokens::Moat        },
+        { "Moneylender", card_tokens::Moneylender },
+        { "Poacher"    , card_tokens::Poacher     },
+        { "Remodel"    , card_tokens::Remodel     },
+        { "Sentry"     , card_tokens::Sentry      },
+        { "Smithy"     , card_tokens::Smithy      },
     });
+
+    static const auto verb_tokens_map = makeBimap<verb_tokens>(
+    {
+        // Verbs
+        { "buys"    , verb_tokens::Buy     },
+        { "discards", verb_tokens::Discard },
+        { "draws"   , verb_tokens::Draw    },
+        { "gains"   , verb_tokens::Gain    },
+        { "plays"   , verb_tokens::Play    },
+        { "reacts"  , verb_tokens::React   },
+        { "reveals" , verb_tokens::Reveal  },
+        { "shuffles", verb_tokens::Shuffle },
+        { "starts"  , verb_tokens::Starts  },
+        { "topdecks", verb_tokens::Topdeck },
+        { "trashes" , verb_tokens::Trash   },
+    });
+    // Objects
+    //{ "deck", tokens::Deck },
 }
