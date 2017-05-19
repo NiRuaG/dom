@@ -184,7 +184,6 @@ namespace dominion {
         throw;
     }
 
-    using pair_card_num = std::pair<unsigned short, card_tokens>;
     std::vector<pair_card_num> parse_cards(std::istream& istr) {
         decltype(parse_cards(istr)) cards;
 
