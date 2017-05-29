@@ -19,7 +19,6 @@ namespace dominion {
         unsigned short parse_card_num(std::string&);
         std::vector<pair_card_num> parse_cards(std::istream&);
 
-        //static std::map<std::string, unsigned short> counts_;
-        static int counts_;
+        extern std::map<std::string, unsigned short> counts_;
     }
 }

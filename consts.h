@@ -21,6 +21,7 @@ namespace dominion {
         Cellar,
         Chapel,
         Festival,
+        Harbinger,
         Laboratory,
         Library,
         Market,
@@ -32,6 +33,7 @@ namespace dominion {
         Remodel,
         Sentry,
         Smithy,
+        Vassal,
 
         // Objects
         Card
@@ -43,6 +45,7 @@ namespace dominion {
         Discard,
         Draw,
         Gain,
+        Look,
         Play,
         React,
         Reveal,
@@ -70,6 +73,7 @@ namespace dominion {
         { "Cellars"     , "Cellar"     },
         { "Chapels"     , "Chapel"     },
         { "Festivals"   , "Festival"   },
+        { "Harbingers"  , "Harbinger"  },
         { "Laboratories", "Laboratory" },
         { "Libraries"   , "Library"    },
         { "Markets"     , "Market"     },
@@ -81,6 +85,7 @@ namespace dominion {
         { "Remodels"    , "Remodel"    },
         { "Sentries"    , "Sentry"     },
         { "Smithies"    , "Smithy"     },
+        { "Vassals"     , "Vassal"     },
         { "cards"       , "card"       },
     };
 
@@ -109,6 +114,7 @@ namespace dominion {
         { "Cellar"     , card_tokens::Cellar      },
         { "Chapel"     , card_tokens::Chapel      },
         { "Festival"   , card_tokens::Festival    },
+        { "Harbinger"  , card_tokens::Harbinger   },
         { "Laboratory" , card_tokens::Laboratory  },
         { "Library"    , card_tokens::Library     },
         { "Market"     , card_tokens::Market      },
@@ -120,6 +126,7 @@ namespace dominion {
         { "Remodel"    , card_tokens::Remodel     },
         { "Sentry"     , card_tokens::Sentry      },
         { "Smithy"     , card_tokens::Smithy      },
+        { "Vassal"     , card_tokens::Vassal      },
     });
 
     static const auto verb_tokens_map = makeBimap<verb_tokens>(
@@ -129,6 +136,7 @@ namespace dominion {
         { "discards", verb_tokens::Discard },
         { "draws"   , verb_tokens::Draw    },
         { "gains"   , verb_tokens::Gain    },
+        { "looks"   , verb_tokens::Look    },
         { "plays"   , verb_tokens::Play    },
         { "reacts"  , verb_tokens::React   },
         { "reveals" , verb_tokens::Reveal  },

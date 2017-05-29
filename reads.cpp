@@ -26,12 +26,7 @@ namespace dominion {
     {
         while (istrm_.good())
             read_turnblock();
-        
-        std::cout << parser::counts_;
-        std::cin.get();
-        //for (const auto& i : parser::counts_)
-            //std::cout << std::setw(20) << std::left << i.first << " " << i.second << std::endl;
-
+       
         return;
     }
 
@@ -50,6 +45,7 @@ namespace dominion {
             std::string s;
             read_line(istrm_, s);
             auto turnparse = parser::parse_turnline(s);
+            
 
             auto& p = game_.players_by_name[turnparse.playerID];
             if (turnparse.verb == verb_tokens::Starts) {

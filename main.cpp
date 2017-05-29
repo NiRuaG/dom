@@ -18,7 +18,7 @@ using std::stringstream;
 #include "reads.h"
 #include "parser.h"
 
-const auto FILE_NAME_PATH = R"(.\gamesaves\3284021.txt)";
+const auto FILE_NAME_PATH = R"(.\gamesaves\3943515.txt)";
 
 
 game_struct THE_GAME;
@@ -92,6 +92,8 @@ void print_summary() {
     return;
 }
 
+decltype(dominion::parser::counts_) dominion::parser::counts_{};
+
 int main(int argc, char *argv[]){
     ifstream gamefile(FILE_NAME_PATH);
 
@@ -103,12 +105,13 @@ int main(int argc, char *argv[]){
 
         dominion::gameReader(gamefile, THE_GAME).read_game();
         
+        for (const auto& i : dominion::parser::counts_)
+            std::cout << std::setw(20) << std::left << i.first << " " << i.second << std::endl;
+
         print_summary();
     }
-
-    cout << dominion::parser::counts_;
-    //for (auto& i : dominion::parser::counts_)
-        //std::cout << i.first << i.second;
     
-    std::cin.get();
+    char c_exit;
+    do{std::cin.get(c_exit);
+    }while (c_exit != 'x'); 
 }

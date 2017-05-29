@@ -6,6 +6,7 @@
 #endif
 
 namespace dominion{ namespace parser {
+    
     struct_turnline
         parse_turnline(std::string& str) {
 
@@ -33,7 +34,7 @@ namespace dominion{ namespace parser {
             linestream >> t1 >> t2; /// !this is destructive
             if (t1 == "and" && t2 == "gains")
             {
-                ++counts_;// ["buys and gains"];
+                ++counts_["buys and gains"];
             }
             else
             {
@@ -46,7 +47,7 @@ namespace dominion{ namespace parser {
             std::string t;
             linestream >> t; ///! destructive
             if (t == "with")
-                ++counts_;//["reacts with"];
+                ++counts_["reacts with"];
             else
             {
                 std::cerr << "\b! REACTS, but not \"with\"";
@@ -54,11 +55,22 @@ namespace dominion{ namespace parser {
             }
         }break;
 
+        case verb_tokens::Look: {
+            std::string t;
+            linestream >> t; ///! destructive
+            if (t == "at")
+                ++counts_["looks at"];
+            else
+            {
+                std::cerr << "\b! LOOKS, but not \"at\"";
+                std::cin.get();
+            }
+        }break;
         case verb_tokens::Starts: {
             std::string t;
             linestream >> t; /// destructive
             if (t == "with")
-                ++counts_;// ["starts with"];
+                ++counts_["starts with"];
             else
             {
                 std::cerr << "\b! STARTS, but not \"with\"";
@@ -84,14 +96,13 @@ namespace dominion{ namespace parser {
         return ret;
     }
 
-
     verb_tokens
         parse_verb(std::string& str) {
         
         auto verb_find = verb_tokens_map.left.find(str);
         if (verb_find != verb_tokens_map.left.end())
         {   
-            ++counts_;//[verb_find->first];
+            ++counts_[verb_find->first];
             return verb_find->second;
         }
 
@@ -104,6 +115,7 @@ namespace dominion{ namespace parser {
 
     std::vector<pair_card_num>
         parse_cards(std::istream& istr) {
+        
         decltype(parse_cards(istr)) ret{};
 
         std::string str;
@@ -124,14 +136,11 @@ namespace dominion{ namespace parser {
                 str_card = sing_find->second;
             // get card token
             auto card_find = card_tokens_map.left.find(str_card);
-            if (card_find != card_tokens_map.left.end())
-            {
-                ++counts_;// [card_find->first];
-                //3. append the <num,card> pair to return
+            if (card_find != card_tokens_map.left.end()) {
+                ++counts_[card_find->first];
+                //append the <num,card> pair to return
                 ret.emplace_back(num, card_find->second);
-            }
-            else
-            {
+            } else {
 #ifdef _DEBUG
                 std::cerr << "\b! couldnt find card: [" << str_card << "]";
                 std::cin.get();
