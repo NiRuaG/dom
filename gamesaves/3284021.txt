@@ -1,4 +1,5 @@
 Game #3284021, unrated.
+
 N starts with 7 Coppers and 3 Estates.
 N shuffles their deck.
 N draws 4 Coppers and an Estate.

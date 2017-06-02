@@ -2,12 +2,14 @@
 
 #include <vector>
 #include <string>
+#include <sstream>
 #include <map>
 #include "consts.h"
 
 namespace dominion {
     namespace parser {
-        using pair_card_num = std::pair<unsigned short, card_tokens>;
+        using pair_card_num = std::pair<unsigned short, card const*>;
+        
         struct struct_turnline {
             std::string playerID;
             dominion::verb_tokens verb;

@@ -13,6 +13,7 @@ using std::string;
 #include <sstream>
 using std::stringstream;
 
+#include "gInc.h"
 #include "structs.h"
 #include "consts.h"
 #include "reads.h"
@@ -39,26 +40,26 @@ bool isVictoryCard(dominion::card_tokens c)
 
 unsigned short calc_VP(player_struct const& plyr)
 {
-    using dominion::card_tokens;
+    using namespace dominion;
 
-    decltype(calc_VP(plyr)) ret = 0;
+    return_type_of<decltype(&calc_VP)> ret = 0;
 
     unsigned short gV = floor(plyr.cards_in_deck.size() / 10);
 
     auto
-    f = plyr.cards_in_deck.find(card_tokens::Estate  );
+    f = plyr.cards_in_deck.find(&Estate  );
     if (f != plyr.cards_in_deck.end())
         ret +=  1 * f->second;
     
-    f = plyr.cards_in_deck.find(card_tokens::Duchy   );
+    f = plyr.cards_in_deck.find(&Duchy   );
     if (f != plyr.cards_in_deck.end())
         ret +=  3 * f->second;
     
-    f = plyr.cards_in_deck.find(card_tokens::Province);
+    f = plyr.cards_in_deck.find(&Province);
     if (f != plyr.cards_in_deck.end())
         ret +=  6 * f->second;
     
-    f = plyr.cards_in_deck.find(card_tokens::Gardens );
+    f = plyr.cards_in_deck.find(&Gardens );
     if (f != plyr.cards_in_deck.end())
         ret += gV * f->second;
     
@@ -77,22 +78,21 @@ void print_summary() {
     cout << "\nPlayer decks:\n";
     for (auto const& p : THE_GAME.players_by_name)
     {
-        auto cut_name = p.first;
-        cut_name.resize(20);
-        cout << endl << setw(20) << cut_name;
+        int tot_cost = 0;
+        cout << endl << setw(20) << p.first.substr(0,20);
         for (auto const& c : p.second.cards_in_deck)
         {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
+            tot_cost += c.first->cost * c.second;
         }
 
         // Victory Points
         cout << "\nVP: " << calc_VP(p.second) << endl;
+        cout << "total cost of deck: " << tot_cost << endl;
     }
 
     return;
 }
-
-decltype(dominion::parser::counts_) dominion::parser::counts_{};
 
 int main(int argc, char *argv[]){
     ifstream gamefile(FILE_NAME_PATH);

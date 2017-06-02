@@ -1,4 +1,8 @@
-Game #3943515, rated.\\nSujak: 36.02\\nNiRuaG: 39.29\\n\\n
+Game #3943515, rated.
+Sujak: 36.02
+NiRuaG: 39.29
+
+//Turn 0
 S starts with 7 Coppers and 3 Estates.
 S shuffles their deck.
 S draws 3 Coppers and 2 Estates.

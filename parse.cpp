@@ -1,4 +1,3 @@
-#include <sstream>
 #include "parser.h"
 
 #ifdef _DEBUG
@@ -6,7 +5,8 @@
 #endif
 
 namespace dominion{ namespace parser {
-    
+    decltype(dominion::parser::counts_) dominion::parser::counts_{};
+
     struct_turnline
         parse_turnline(std::string& str) {
 
@@ -119,8 +119,11 @@ namespace dominion{ namespace parser {
         decltype(parse_cards(istr)) ret{};
 
         std::string str;
-        while (istr >> str && str != "and") // "and" continues to proceed
+        while (istr >> str) 
         {
+            if (str == "and") // "and" continues the collection
+                continue;
+
             //1. number part of pair
             auto num = parse_card_num(str);
 
@@ -161,7 +164,7 @@ namespace dominion{ namespace parser {
         //else
         unsigned short i;
         try {
-            i = stoi(str);
+            i = (unsigned short)std::stoi(str);
         } catch (...) {
             std::cout << "\b! caught exception from stoi on string: " << str << std::endl;
             std::cin.get();

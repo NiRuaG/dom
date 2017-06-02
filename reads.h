@@ -1,7 +1,8 @@
 #pragma once
 
+#include <istream>
+
 #include "structs.h"
-struct istream;
 
 namespace dominion {
     class gameReader
@@ -13,8 +14,8 @@ namespace dominion {
 
     private:
         std::istream& istrm_;
-        game_struct& game_;
+        game_struct &  game_;
 
-        void read_turnblock();  
+        void read_turnblock();
     };
 }

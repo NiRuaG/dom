@@ -1,46 +1,57 @@
 #pragma once
 
 #include <map>
+#include <string>
 #include <boost\bimap.hpp>
 
-
 namespace dominion {
-    enum class card_tokens {
-        // Cards
-        Copper,
-        Silver,
-        Gold,
-
-        Estate,
-        Duchy,
-        Province,
-        Gardens,
-
-        Bandit,
-        Bureaucrat,
-        Cellar,
-        Chapel,
-        Festival,
-        Harbinger,
-        Laboratory,
-        Library,
-        Market,
-        Merchant,
-        Militia,
-        Moat,
-        Moneylender,
-        Poacher,
-        Remodel,
-        Sentry,
-        Smithy,
-        Vassal,
-
-        // Objects
-        Card
+    struct card {
+        int cost;
     };
+    // Cards
+    extern const card Curse;
+
+    extern const card Copper;
+    extern const card Silver;
+    extern const card Gold  ;
+
+    extern const card Estate  ;
+    extern const card Duchy   ;
+    extern const card Province;
+    extern const card Gardens ;
+
+    extern const card Artisan     ;
+    extern const card Bandit      ;
+    extern const card Bureaucrat  ;
+    extern const card Cellar      ;
+    extern const card Chapel      ;
+    extern const card Council_Room;
+    extern const card Festival    ;
+    extern const card Harbinger   ;
+    extern const card Laboratory  ;
+    extern const card Library     ;
+    extern const card Market      ;
+    extern const card Merchant    ;
+    extern const card Militia     ;
+    extern const card Mine        ;
+    extern const card Moat        ;
+    extern const card Moneylender ;
+    extern const card Poacher     ;
+    extern const card Remodel     ;
+    extern const card Sentry      ;
+    extern const card Smithy      ;
+    extern const card Throne_Room ;
+    extern const card Vassal      ;
+    extern const card Village     ;
+    extern const card Witch       ;
+    extern const card Workshop    ;
+    // Objects
+    extern const card Card;
+
+    // object token, unused?
+    // Deck
 
     enum class verb_tokens {
-        // Verbs
         Buy,
         Discard,
         Draw,
@@ -55,96 +66,12 @@ namespace dominion {
         Trash,
     };
 
-    // object token, unused?
-    // Deck
-
-
-    static const std::map<std::string, std::string> singular
-    {
-        { "Coppers"     , "Copper"     },
-        { "Silvers"     , "Silver"     },
-        { "Golds"       , "Gold"       },
-        { "Estates"     , "Estate"     },
-        { "Duchies"     , "Duchy"      },
-        { "Provinces"   , "Province"   },
-        //{ "Gardens"     , "Gardens"    },
-        { "Bandits"     , "Bandit"     },
-        { "Bureaucrats" , "Bureaucrat" },
-        { "Cellars"     , "Cellar"     },
-        { "Chapels"     , "Chapel"     },
-        { "Festivals"   , "Festival"   },
-        { "Harbingers"  , "Harbinger"  },
-        { "Laboratories", "Laboratory" },
-        { "Libraries"   , "Library"    },
-        { "Markets"     , "Market"     },
-        { "Merchants"   , "Merchant"   },
-        { "Militias"    , "Militia"    },
-        { "Moats"       , "Moat"       },
-        { "Moneylenders", "Moneylender"},
-        { "Poachers"    , "Poacher"    },
-        { "Remodels"    , "Remodel"    },
-        { "Sentries"    , "Sentry"     },
-        { "Smithies"    , "Smithy"     },
-        { "Vassals"     , "Vassal"     },
-        { "cards"       , "card"       },
-    };
-
+    
+    extern const std::map<std::string, std::string> singular;
+    
     template <typename T>
-    using token_bimap = boost::bimap<std::string, T>;
+    using bimapT = boost::bimap<const std::string, T>;
 
-    template <typename T>
-    token_bimap<T> makeBimap(std::initializer_list<typename token_bimap<T>::value_type>);
-
-
-    static const auto card_tokens_map = makeBimap<card_tokens>(
-    {
-        { "card", card_tokens::Card },
-
-        { "Copper", card_tokens::Copper },
-        { "Silver", card_tokens::Silver },
-        { "Gold"  , card_tokens::Gold   },
-
-        { "Estate"  , card_tokens::Estate   },
-        { "Duchy"   , card_tokens::Duchy    },
-        { "Province", card_tokens::Province },
-        { "Gardens" , card_tokens::Gardens  },
-
-        { "Bandit"     , card_tokens::Bandit      },
-        { "Bureaucrat" , card_tokens::Bureaucrat  },
-        { "Cellar"     , card_tokens::Cellar      },
-        { "Chapel"     , card_tokens::Chapel      },
-        { "Festival"   , card_tokens::Festival    },
-        { "Harbinger"  , card_tokens::Harbinger   },
-        { "Laboratory" , card_tokens::Laboratory  },
-        { "Library"    , card_tokens::Library     },
-        { "Market"     , card_tokens::Market      },
-        { "Merchant"   , card_tokens::Merchant    },
-        { "Militia"    , card_tokens::Militia     },
-        { "Moat"       , card_tokens::Moat        },
-        { "Moneylender", card_tokens::Moneylender },
-        { "Poacher"    , card_tokens::Poacher     },
-        { "Remodel"    , card_tokens::Remodel     },
-        { "Sentry"     , card_tokens::Sentry      },
-        { "Smithy"     , card_tokens::Smithy      },
-        { "Vassal"     , card_tokens::Vassal      },
-    });
-
-    static const auto verb_tokens_map = makeBimap<verb_tokens>(
-    {
-        // Verbs
-        { "buys"    , verb_tokens::Buy     },
-        { "discards", verb_tokens::Discard },
-        { "draws"   , verb_tokens::Draw    },
-        { "gains"   , verb_tokens::Gain    },
-        { "looks"   , verb_tokens::Look    },
-        { "plays"   , verb_tokens::Play    },
-        { "reacts"  , verb_tokens::React   },
-        { "reveals" , verb_tokens::Reveal  },
-        { "shuffles", verb_tokens::Shuffle },
-        { "starts"  , verb_tokens::Starts  },
-        { "topdecks", verb_tokens::Topdeck },
-        { "trashes" , verb_tokens::Trash   },
-    });
-    // Objects
-    //{ "deck", tokens::Deck },
+    extern const bimapT<card const*const> card_tokens_map;
+    extern const bimapT<verb_tokens     > verb_tokens_map;
 }
