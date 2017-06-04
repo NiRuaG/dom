@@ -27,63 +27,49 @@ namespace dominion{ namespace parser {
             std::cin.get();
         }
         // special verb cases
+        auto expect = [&linestream](verb_tokens const& v, std::string const& e) {
+            std::stringstream ex(e);
+            std::string fromline, fromex;
+            while (
+                ex         >> fromex   && 
+                linestream >> fromline &&  /// !destructive to linestream
+                fromex == fromline)
+            {
+                // std::cout << fromline << " " << fromex << std::endl;
+            }
+
+            auto& vstr = verb_tokens_map.right.at(v);
+            if (ex.eof() && !linestream.bad() && fromex == fromline)
+                ++counts_[vstr + " " + e];
+            else
+            {
+                std::cerr << "\b! \"" << vstr << "\" but not \"" << e << "\", found instead: \"" << fromline << "\"";
+                std::cin.get();
+                //throw?
+            }
+        };
         switch (ret.verb)
         {
         case verb_tokens::Buy: {
-            std::string t1, t2;
-            linestream >> t1 >> t2; /// !this is destructive
-            if (t1 == "and" && t2 == "gains")
-            {
-                ++counts_["buys and gains"];
-            }
-            else
-            {
-                std::cerr << "\b! BUYS, but not \"and gains\"";
-                std::cin.get();
-            }
+            expect(verb_tokens::Buy  , "and gains");
         }break;
-
         case verb_tokens::React: {
-            std::string t;
-            linestream >> t; ///! destructive
-            if (t == "with")
-                ++counts_["reacts with"];
-            else
-            {
-                std::cerr << "\b! REACTS, but not \"with\"";
-                std::cin.get();
-            }
+            expect(verb_tokens::React, "with"     );
         }break;
-
         case verb_tokens::Look: {
-            std::string t;
-            linestream >> t; ///! destructive
-            if (t == "at")
-                ++counts_["looks at"];
-            else
-            {
-                std::cerr << "\b! LOOKS, but not \"at\"";
-                std::cin.get();
-            }
+            expect(verb_tokens::Look , "at"       );
         }break;
-        case verb_tokens::Starts: {
-            std::string t;
-            linestream >> t; /// destructive
-            if (t == "with")
-                ++counts_["starts with"];
-            else
-            {
-                std::cerr << "\b! STARTS, but not \"with\"";
-                std::cin.get();
-            }
+        case verb_tokens::Start: {
+            expect(verb_tokens::Start, "with"     );
         }break;
 
         default:
             ;
         }//switch verb
 
+
         if (ret.verb == verb_tokens::Shuffle)
-            return ret; //end of line is ".. shuffles their deck"
+            return ret; //end of line assumed ".. shuffles their deck"
         
         // rest of line is set of cards
         try {
@@ -143,8 +129,9 @@ namespace dominion{ namespace parser {
                 ++counts_[card_find->first];
                 //append the <num,card> pair to return
                 ret.emplace_back(num, card_find->second);
-            } else {
+            } 
 #ifdef _DEBUG
+            else {
                 std::cerr << "\b! couldnt find card: [" << str_card << "]";
                 std::cin.get();
                 throw;

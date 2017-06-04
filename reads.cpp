@@ -67,7 +67,7 @@ namespace dominion {
                 }
                     
             }break;
-            case verb_tokens::Starts: {
+            case verb_tokens::Start: {
                 for (auto const& c : turnparse.cards)
                 {
                     p.cards_in_deck[c.second] = c.first;

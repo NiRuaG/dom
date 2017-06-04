@@ -3,51 +3,50 @@
 namespace dominion {
     template <typename T>
     bimapT<T>
-        makeBimap(std::initializer_list<typename bimapT<T>::value_type> list) 
-    {
-        return bimapT<T>(list.begin() , list.end() ) ;
-    }
+        makeBimap(std::initializer_list<typename bimapT<T>::value_type> list){
+        return bimapT<T>(list.begin(), list.end());}
 
-    decltype(Curse) Curse{ 0 };
+    card const
+        Curse{ 0 },
 
-    decltype(Copper) Copper{ 0 };
-    decltype(Silver) Silver{ 3 };
-    decltype(Gold  ) Gold  { 6 };
+        Copper{ 0 },
+        Silver{ 3 },
+        Gold  { 6 },
 
-    decltype(Estate  ) Estate  { 2 };
-    decltype(Duchy   ) Duchy   { 5 };
-    decltype(Province) Province{ 8 };
-    decltype(Gardens ) Gardens { 4 };
+        Estate  { 2 },
+        Duchy   { 5 },
+        Province{ 8 },
+        Gardens { 4 },
 
-    decltype(Artisan     ) Artisan     { 6 };
-    decltype(Bandit      ) Bandit      { 5 };
-    decltype(Bureaucrat  ) Bureaucrat  { 4 };
-    decltype(Cellar      ) Cellar      { 2 };
-    decltype(Chapel      ) Chapel      { 2 };
-    decltype(Council_Room) Council_Room{ 5 };
-    decltype(Festival    ) Festival    { 5 };
-    decltype(Harbinger   ) Harbinger   { 3 };
-    decltype(Laboratory  ) Laboratory  { 5 };
-    decltype(Library     ) Library     { 5 };
-    decltype(Market      ) Market      { 5 };
-    decltype(Merchant    ) Merchant    { 3 };
-    decltype(Militia     ) Militia     { 4 };
-    decltype(Mine        ) Mine        { 5 };
-    decltype(Moat        ) Moat        { 2 };
-    decltype(Moneylender ) Moneylender { 4 };
-    decltype(Poacher     ) Poacher     { 4 };
-    decltype(Remodel     ) Remodel     { 4 };
-    decltype(Sentry      ) Sentry      { 5 };
-    decltype(Smithy      ) Smithy      { 4 };
-    decltype(Throne_Room ) Throne_Room { 4 };
-    decltype(Vassal      ) Vassal      { 3 };
-    decltype(Village     ) Village     { 3 };
-    decltype(Witch       ) Witch       { 5 };
-    decltype(Workshop    ) Workshop    { 3 };
+        Artisan     { 6 },
+        Bandit      { 5 },
+        Bureaucrat  { 4 },
+        Cellar      { 2 },
+        Chapel      { 2 },
+        Council_Room{ 5 },
+        Festival    { 5 },
+        Harbinger   { 3 },
+        Laboratory  { 5 },
+        Library     { 5 },
+        Market      { 5 },
+        Merchant    { 3 },
+        Militia     { 4 },
+        Mine        { 5 },
+        Moat        { 2 },
+        Moneylender { 4 },
+        Poacher     { 4 },
+        Remodel     { 4 },
+        Sentry      { 5 },
+        Smithy      { 4 },
+        Throne_Room { 4 },
+        Vassal      { 3 },
+        Village     { 3 },
+        Witch       { 5 },
+        Workshop    { 3 },
 
-    decltype(Card) Card{ 0 };
+        Card{ 0 };
 
-    decltype(card_tokens_map)  card_tokens_map = makeBimap<card const*const>(
+    decltype(card_tokens_map) card_tokens_map = makeBimap<card const*const>(
     {
         { "card", &Card },
 
@@ -78,9 +77,9 @@ namespace dominion {
         { "Sentry"     , &Sentry      },
         { "Smithy"     , &Smithy      },
         { "Vassal"     , &Vassal      },
-    }) ;
+    });
 
-    decltype(singular)  singular
+    decltype(singular) singular
     {
        { "Coppers"     , "Copper"     },
        { "Silvers"     , "Silver"     },
@@ -110,7 +109,7 @@ namespace dominion {
        { "cards"       , "card"       },
     };
 
-    decltype(verb_tokens_map)  verb_tokens_map = makeBimap<verb_tokens>(
+    decltype(verb_tokens_map) verb_tokens_map = makeBimap<verb_tokens>(
     {
         // Verbs
         { "buys"    , verb_tokens::Buy     },
@@ -122,7 +121,7 @@ namespace dominion {
         { "reacts"  , verb_tokens::React   },
         { "reveals" , verb_tokens::Reveal  },
         { "shuffles", verb_tokens::Shuffle },
-        { "starts"  , verb_tokens::Starts  },
+        { "starts"  , verb_tokens::Start   },
         { "topdecks", verb_tokens::Topdeck },
         { "trashes" , verb_tokens::Trash   },
     }) ;

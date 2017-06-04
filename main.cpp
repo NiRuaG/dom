@@ -67,13 +67,14 @@ unsigned short calc_VP(player_struct const& plyr)
 }
 
 void print_summary() {
+    /*
     cout << "\nNumber of Turns\n";
     for (auto const& i : THE_GAME.players_by_name)
     {
         auto cut_name = i.first;
         cut_name.resize(20);
         cout << setw(20) << cut_name << " " << i.second.num_turns << endl;
-    }
+    }*/
 
     cout << "\nPlayer decks:\n";
     for (auto const& p : THE_GAME.players_by_name)
@@ -101,7 +102,7 @@ int main(int argc, char *argv[]){
         cout << "\b! error opening file at\n" << FILE_NAME_PATH << endl;
     }
     else {
-        std::ios::sync_with_stdio(false);
+        std::ios::sync_with_stdio(false); // if not mixing cout & printf calls, this helps makes cout faster
 
         dominion::gameReader(gamefile, THE_GAME).read_game();
         
@@ -111,6 +112,7 @@ int main(int argc, char *argv[]){
         print_summary();
     }
     
+    // exit loop
     char c_exit;
     do{std::cin.get(c_exit);
     }while (c_exit != 'x'); 

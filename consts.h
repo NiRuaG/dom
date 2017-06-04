@@ -8,45 +8,47 @@ namespace dominion {
     struct card {
         int cost;
     };
+
     // Cards
-    extern const card Curse;
+    extern card const
+        Curse,
 
-    extern const card Copper;
-    extern const card Silver;
-    extern const card Gold  ;
+        Copper,
+        Silver,
+        Gold  ,
 
-    extern const card Estate  ;
-    extern const card Duchy   ;
-    extern const card Province;
-    extern const card Gardens ;
+        Estate  ,
+        Duchy   ,
+        Province,
+        Gardens ,
 
-    extern const card Artisan     ;
-    extern const card Bandit      ;
-    extern const card Bureaucrat  ;
-    extern const card Cellar      ;
-    extern const card Chapel      ;
-    extern const card Council_Room;
-    extern const card Festival    ;
-    extern const card Harbinger   ;
-    extern const card Laboratory  ;
-    extern const card Library     ;
-    extern const card Market      ;
-    extern const card Merchant    ;
-    extern const card Militia     ;
-    extern const card Mine        ;
-    extern const card Moat        ;
-    extern const card Moneylender ;
-    extern const card Poacher     ;
-    extern const card Remodel     ;
-    extern const card Sentry      ;
-    extern const card Smithy      ;
-    extern const card Throne_Room ;
-    extern const card Vassal      ;
-    extern const card Village     ;
-    extern const card Witch       ;
-    extern const card Workshop    ;
-    // Objects
-    extern const card Card;
+        Artisan     ,
+        Bandit      ,
+        Bureaucrat  ,
+        Cellar      ,
+        Chapel      ,
+        Council_Room,
+        Festival    ,
+        Harbinger   ,
+        Laboratory  ,
+        Library     ,
+        Market      ,
+        Merchant    ,
+        Militia     ,
+        Mine        ,
+        Moat        ,
+        Moneylender ,
+        Poacher     ,
+        Remodel     ,
+        Sentry      ,
+        Smithy      ,
+        Throne_Room ,
+        Vassal      ,
+        Village     ,
+        Witch       ,
+        Workshop    ,
+        // Objects
+        Card;
 
     // object token, unused?
     // Deck
@@ -61,7 +63,7 @@ namespace dominion {
         React,
         Reveal,
         Shuffle,
-        Starts,
+        Start,
         Topdeck,
         Trash,
     };
