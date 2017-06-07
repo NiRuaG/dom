@@ -18,7 +18,7 @@ namespace dominion{ namespace parser {
         std::stringstream linestream(str);
 
         std::string verb;
-        linestream >> ret.playerID >> verb;
+        linestream >> ret.playerID >> verb; /// possible for playerID to have space
         // next token should be a (set of) verb(s)
         try {
             ret.verb = parse_verb(verb);
@@ -26,47 +26,43 @@ namespace dominion{ namespace parser {
             std::cout << "\b! caught parse_verb exception";
             std::cin.get();
         }
-        // special verb cases
-        auto expect = [&linestream](verb_tokens const& v, std::string const& e) {
-            std::stringstream ex(e);
-            std::string fromline, fromex;
-            while (
-                ex         >> fromex   && 
-                linestream >> fromline &&  /// !destructive to linestream
-                fromex == fromline)
-            {
-                // std::cout << fromline << " " << fromex << std::endl;
-            }
+        
+        const static std::map<verb_tokens, std::string> verb_supplements =
+        {
+            { verb_tokens::Buy  , " and gains " },
+            { verb_tokens::React, " with "      },
+            { verb_tokens::Look , " at "        },
+            { verb_tokens::Start, " with "      },
+        };
 
-            auto& vstr = verb_tokens_map.right.at(v);
-            if (ex.eof() && !linestream.bad() && fromex == fromline)
-                ++counts_[vstr + " " + e];
+        auto expect = [&linestream](std::string const& str)->bool {
+            auto save_pos = linestream.tellg();
+
+            bool good = true;
+            for (auto const& i : str) {
+                if ((char)linestream.get() != i || !linestream.good()){
+                    good = false;
+                    break;
+                }
+            }
+            
+            if (!good)
+                linestream.seekg(save_pos); // return to saved stream position
+
+            return good;
+        };
+
+        auto f = verb_supplements.find(ret.verb);
+        if (f != verb_supplements.end()) {
+            auto& vstr = verb_tokens_map.right.at(f->first);
+            if (expect(f->second))
+                ++counts_[vstr + f->second];
             else
             {
-                std::cerr << "\b! \"" << vstr << "\" but not \"" << e << "\", found instead: \"" << fromline << "\"";
+                std::cerr << "\b! \"" << vstr << "\" but not \"" << f->second << "\"";
                 std::cin.get();
-                //throw?
             }
-        };
-        switch (ret.verb)
-        {
-        case verb_tokens::Buy: {
-            expect(verb_tokens::Buy  , "and gains");
-        }break;
-        case verb_tokens::React: {
-            expect(verb_tokens::React, "with"     );
-        }break;
-        case verb_tokens::Look: {
-            expect(verb_tokens::Look , "at"       );
-        }break;
-        case verb_tokens::Start: {
-            expect(verb_tokens::Start, "with"     );
-        }break;
-
-        default:
-            ;
-        }//switch verb
-
+        }
 
         if (ret.verb == verb_tokens::Shuffle)
             return ret; //end of line assumed ".. shuffles their deck"

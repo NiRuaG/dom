@@ -24,7 +24,6 @@ const auto FILE_NAME_PATH = R"(.\gamesaves\3943515.txt)";
 
 game_struct THE_GAME;
 
-
 /*
 bool isVictoryCard(dominion::card_tokens c)
 {
@@ -40,29 +39,55 @@ bool isVictoryCard(dominion::card_tokens c)
 
 unsigned short calc_VP(player_struct const& plyr)
 {
-    using namespace dominion;
+    namespace ns = dominion;
 
     return_type_of<decltype(&calc_VP)> ret = 0;
 
     unsigned short gV = floor(plyr.cards_in_deck.size() / 10);
 
     auto
-    f = plyr.cards_in_deck.find(&Estate  );
+    f = plyr.cards_in_deck.find(&ns::Estate  );
     if (f != plyr.cards_in_deck.end())
         ret +=  1 * f->second;
     
-    f = plyr.cards_in_deck.find(&Duchy   );
+    f = plyr.cards_in_deck.find(&ns::Duchy   );
     if (f != plyr.cards_in_deck.end())
         ret +=  3 * f->second;
     
-    f = plyr.cards_in_deck.find(&Province);
+    f = plyr.cards_in_deck.find(&ns::Province);
     if (f != plyr.cards_in_deck.end())
         ret +=  6 * f->second;
     
-    f = plyr.cards_in_deck.find(&Gardens );
+    f = plyr.cards_in_deck.find(&ns::Gardens );
     if (f != plyr.cards_in_deck.end())
         ret += gV * f->second;
-    
+
+    f = plyr.cards_in_deck.find(&ns::Curse   );
+    if (f != plyr.cards_in_deck.end())
+        ret -= 1 * f->second;
+
+    return ret;
+}
+
+unsigned short calc_Trsr(player_struct const& plyr)
+{
+    namespace ns = dominion;
+
+    return_type_of<decltype(&calc_Trsr)> ret = 0;
+
+    auto
+    f = plyr.cards_in_deck.find(&ns::Copper);
+    if (f != plyr.cards_in_deck.end())
+        ret += 1 * f->second;
+
+    f = plyr.cards_in_deck.find(&ns::Silver);
+    if (f != plyr.cards_in_deck.end())
+        ret += 2 * f->second;
+
+    f = plyr.cards_in_deck.find(&ns::Gold  );
+    if (f != plyr.cards_in_deck.end())
+        ret += 3 * f->second;
+
     return ret;
 }
 
@@ -79,17 +104,42 @@ void print_summary() {
     cout << "\nPlayer decks:\n";
     for (auto const& p : THE_GAME.players_by_name)
     {
-        int tot_cost = 0;
+        using ct = dominion::card::types;
+
+        unsigned short tot_cards = 0;
+        unsigned short tot_cost = 0;
+        std::map<ct, unsigned short> type_counts{};
+
         cout << endl << setw(20) << p.first.substr(0,20);
+        
         for (auto const& c : p.second.cards_in_deck)
         {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
+
             tot_cost += c.first->cost * c.second;
+            for (int i  = static_cast<int>(ct::_BEG);
+                     i != static_cast<int>(ct::_END);
+                ++i)
+            {
+                type_counts[static_cast<ct>(i)] += c.first->type.test(i)*c.second;
+            }
+
+            tot_cards += c.second;
         }
 
-        // Victory Points
-        cout << "\nVP: " << calc_VP(p.second) << endl;
-        cout << "total cost of deck: " << tot_cost << endl;
+        cout
+            << endl
+            << "\n# of cards: " << tot_cards
+            << std::right
+            << "\n# of Victory   cards: " << setw(2) << type_counts[ct::Victory ] << ", total value: " << calc_VP  (p.second)
+            << "\n# of Treasures cards: " << setw(2) << type_counts[ct::Treasure] << ", total value: " << calc_Trsr(p.second)
+            << "\n# of Actions   cards: " << setw(2) << type_counts[ct::Action  ]
+            << "\n# of Curse     cards: " << setw(2) << type_counts[ct::Curse   ]
+            << "\n# of Attack    cards: " << setw(2) << type_counts[ct::Attack  ]
+            << "\n# of Reaction  cards: " << setw(2) << type_counts[ct::Reaction]
+            << std::left
+            << "\n\ntotal cost of deck: " << tot_cost
+            << endl;
     }
 
     return;
@@ -116,4 +166,6 @@ int main(int argc, char *argv[]){
     char c_exit;
     do{std::cin.get(c_exit);
     }while (c_exit != 'x'); 
+
+    return 0;
 }
