@@ -7,21 +7,28 @@
 
 namespace dominion {
     struct card {
-        enum class types : int { /// possibly upgrade to namespace or class with other members
-            _BEG = 0, // _MIN always = 0 & no other hard coded values
-            Action = _BEG, // first element always = _MIN
-            Treasure,
-            Victory ,
-            Curse   ,
-            Attack  ,
-            Reaction,
-            _END,
+        class type{ /// possibly upgrade to namespace or class with other members
+
+        public:
+            enum {
+                Action=0,
+                Treasure,
+                Victory,
+                Curse ,
+                Attack ,
+                Reaction,
+                _END,
+            };
+        private:
+            static int next_i;
+            const int ei;
+            type();
         };
-        
+
         int cost;
-        std::bitset<(int)types::_END> type;
+        std::bitset<(int)type::_END> type;
     };
-    
+
     // Cards
     extern card const
         Curse,
@@ -81,9 +88,8 @@ namespace dominion {
         Trash,
     };
 
-    
     extern const std::map<std::string, std::string> singular;
-    
+
     template <typename T>
     using bimapT = boost::bimap<const std::string, T>;
 

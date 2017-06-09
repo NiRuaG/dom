@@ -49,15 +49,15 @@ unsigned short calc_VP(player_struct const& plyr)
     f = plyr.cards_in_deck.find(&ns::Estate  );
     if (f != plyr.cards_in_deck.end())
         ret +=  1 * f->second;
-    
+
     f = plyr.cards_in_deck.find(&ns::Duchy   );
     if (f != plyr.cards_in_deck.end())
         ret +=  3 * f->second;
-    
+
     f = plyr.cards_in_deck.find(&ns::Province);
     if (f != plyr.cards_in_deck.end())
         ret +=  6 * f->second;
-    
+
     f = plyr.cards_in_deck.find(&ns::Gardens );
     if (f != plyr.cards_in_deck.end())
         ret += gV * f->second;
@@ -111,7 +111,7 @@ void print_summary() {
         std::map<ct, unsigned short> type_counts{};
 
         cout << endl << setw(20) << p.first.substr(0,20);
-        
+
         for (auto const& c : p.second.cards_in_deck)
         {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
@@ -121,7 +121,7 @@ void print_summary() {
                      i != static_cast<int>(ct::_END);
                 ++i)
             {
-                type_counts[static_cast<ct>(i)] += c.first->type.test(i)*c.second;
+                type_counts[static_cast<decltype(ct::Action)>(i)] += c.first->type.test(i)*c.second;
             }
 
             tot_cards += c.second;
@@ -155,17 +155,17 @@ int main(int argc, char *argv[]){
         std::ios::sync_with_stdio(false); // if not mixing cout & printf calls, this helps makes cout faster
 
         dominion::gameReader(gamefile, THE_GAME).read_game();
-        
+
         for (const auto& i : dominion::parser::counts_)
             std::cout << std::setw(20) << std::left << i.first << " " << i.second << std::endl;
 
         print_summary();
     }
-    
+
     // exit loop
     char c_exit;
     do{std::cin.get(c_exit);
-    }while (c_exit != 'x'); 
+    }while (c_exit != 'x');
 
     return 0;
 }

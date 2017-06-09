@@ -5,24 +5,28 @@ namespace dominion {
     bimapT<T>
         makeBimap(std::initializer_list<typename bimapT<T>::value_type> list){
         return bimapT<T>(list.begin(), list.end());}
-    
-    
-    constexpr auto   ActionFlag = 1 << (int)card::types::Action;
+
+    constexpr auto   ActionFlag = 1 << (int)card::type::Action;
     // mix-in card types
-    constexpr auto   AttackFlag = 1 << (int)card::types::Attack  ;
-    constexpr auto ReactionFlag = 1 << (int)card::types::Reaction;
+    constexpr auto   AttackFlag = 1 << (int)card::type::Attack  ;
+    constexpr auto ReactionFlag = 1 << (int)card::type::Reaction;
+
+    decltype(card::type::next_i) card::type::next_i = 0;
+    card::type card::type()
+    : ei(next_i++)
+    {}
 
     card const
-        Curse{ 0, 1 << (int)card::types::Curse },
+        Curse{ 0, 1 << (int)card::type::Curse },
 
-        Copper{ 0, 1 << (int)card::types::Treasure },
-        Silver{ 3, 1 << (int)card::types::Treasure },
-        Gold  { 6, 1 << (int)card::types::Treasure },
+        Copper{ 0, 1 << (int)card::type::Treasure },
+        Silver{ 3, 1 << (int)card::type::Treasure },
+        Gold  { 6, 1 << (int)card::type::Treasure },
 
-        Estate  { 2, 1 << (int)card::types::Victory },
-        Duchy   { 5, 1 << (int)card::types::Victory },
-        Province{ 8, 1 << (int)card::types::Victory },
-        Gardens { 4, 1 << (int)card::types::Victory },
+        Estate  { 2, 1 << (int)card::type::Victory },
+        Duchy   { 5, 1 << (int)card::type::Victory },
+        Province{ 8, 1 << (int)card::type::Victory },
+        Gardens { 4, 1 << (int)card::type::Victory },
 
         Artisan     { 6, ActionFlag },
         Bandit      { 5, ActionFlag | AttackFlag },
