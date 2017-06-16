@@ -39,7 +39,7 @@ bool isVictoryCard(dominion::card_tokens c)
 
 unsigned short calc_VP(player_struct const& plyr)
 {
-    namespace ns = dominion;
+    using ns = dominion::card;
 
     return_type_of<decltype(&calc_VP)> ret = 0;
 
@@ -71,7 +71,7 @@ unsigned short calc_VP(player_struct const& plyr)
 
 unsigned short calc_Trsr(player_struct const& plyr)
 {
-    namespace ns = dominion;
+    using ns = dominion::card;
 
     return_type_of<decltype(&calc_Trsr)> ret = 0;
 
@@ -117,11 +117,10 @@ void print_summary() {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
 
             tot_cost += c.first->cost * c.second;
-            for (int i  = static_cast<int>(ct::_BEG);
-                     i != static_cast<int>(ct::_END);
-                ++i)
+            for (auto const& i : dominion::card::types_vec)
             {
-                type_counts[static_cast<decltype(ct::Action)>(i)] += c.first->type.test(i)*c.second;
+                type_counts[i] +=
+                    c.first->type.test(i) ? c.second : 0;
             }
 
             tot_cards += c.second;

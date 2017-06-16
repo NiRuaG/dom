@@ -4,74 +4,72 @@
 #include <string>
 #include <boost\bimap.hpp>
 #include <bitset>
+#include <vector>
+#include "lib\BitFlag.h"
 
 namespace dominion {
     struct card {
-        class type{ /// possibly upgrade to namespace or class with other members
-
-        public:
-            enum {
-                Action=0,
-                Treasure,
-                Victory,
-                Curse ,
-                Attack ,
-                Reaction,
-                _END,
-            };
-        private:
-            static int next_i;
-            const int ei;
-            type();
+        enum class types : uint8_t {
+            NONE = 0,
+            Action,
+            Treasure,
+            Victory,
+            Curse,
+            Attack,
+            Reaction,
+            _END,
         };
 
         int cost;
-        std::bitset<(int)type::_END> type;
+        BitFlag<types> type;
+
+        static std::vector<types> const types_vec;
+
+        // Cards
+        static card const
+            Curse,
+
+            Copper,
+            Silver,
+            Gold,
+
+            Estate,
+            Duchy,
+            Province,
+            Gardens,
+
+            Artisan,
+            Bandit,
+            Bureaucrat,
+            Cellar,
+            Chapel,
+            Council_Room,
+            Festival,
+            Harbinger,
+            Laboratory,
+            Library,
+            Market,
+            Merchant,
+            Militia,
+            Mine,
+            Moat,
+            Moneylender,
+            Poacher,
+            Remodel,
+            Sentry,
+            Smithy,
+            Throne_Room,
+            Vassal,
+            Village,
+            Witch,
+            Workshop,
+            // Objects
+            Card
+            ;
+
+        // object token, unused?
+        // Deck
     };
-
-    // Cards
-    extern card const
-        Curse,
-
-        Copper,
-        Silver,
-        Gold  ,
-
-        Estate  ,
-        Duchy   ,
-        Province,
-        Gardens ,
-
-        Artisan     ,
-        Bandit      ,
-        Bureaucrat  ,
-        Cellar      ,
-        Chapel      ,
-        Council_Room,
-        Festival    ,
-        Harbinger   ,
-        Laboratory  ,
-        Library     ,
-        Market      ,
-        Merchant    ,
-        Militia     ,
-        Mine        ,
-        Moat        ,
-        Moneylender ,
-        Poacher     ,
-        Remodel     ,
-        Sentry      ,
-        Smithy      ,
-        Throne_Room ,
-        Vassal      ,
-        Village     ,
-        Witch       ,
-        Workshop    ,
-        // Objects
-        Card;
-
-    // object token, unused?
-    // Deck
 
     enum class verb_tokens {
         Buy,

@@ -11,7 +11,7 @@
 #include "parser.h"
 
 namespace dominion {
-    // helper function: 
+    // helper function:
     //   getline that excludes period '.' character at end of line
     auto read_line(std::istream& f, std::string& s) -> decltype(std::getline(f, s)) {
         auto& ret = std::getline(f, s);
@@ -36,7 +36,7 @@ namespace dominion {
         //rest of game
         while (istrm_.good())
             read_turnblock();
-       
+
         return;
     }
 
@@ -65,14 +65,14 @@ namespace dominion {
                 {
                     p.cards_in_deck[c.second] += c.first;
                 }
-                    
+
             }break;
             case verb_tokens::Start: {
                 for (auto const& c : turnparse.cards)
                 {
                     p.cards_in_deck[c.second] = c.first;
                 }
-                    
+
             }break;
             case verb_tokens::Trash: {
                 for (auto const&c : turnparse.cards)
@@ -84,7 +84,7 @@ namespace dominion {
                 ;
             }
         } istrm_.get(); // newline character (10)
-        
+
         if (action_lines.back().verb == verb_tokens::Draw) {
             draw_line = action_lines.back();
             action_lines.pop_back();
@@ -98,10 +98,7 @@ namespace dominion {
             if (action_lines.back().verb == verb_tokens::Play
                 && (std::find_if(action_lines.back().cards.begin(), action_lines.back().cards.end(),
                     [](decltype(action_lines.back().cards)::value_type c) {
-                       return 
-                              c.second == &dominion::Copper
-                           || c.second == &dominion::Silver
-                           || c.second == &dominion::Gold;
+                        return c.second->type.test(dominion::card::types::Treasure);
             })) != action_lines.back().cards.end()) {
                 trsr_line = action_lines.back();
                 action_lines.pop_back();
@@ -143,5 +140,5 @@ namespace dominion {
         //std::cin.get();
 #endif
         return;
-    }   
+    }
 } // namespace dominion

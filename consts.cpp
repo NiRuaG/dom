@@ -6,87 +6,95 @@ namespace dominion {
         makeBimap(std::initializer_list<typename bimapT<T>::value_type> list){
         return bimapT<T>(list.begin(), list.end());}
 
-    constexpr auto   ActionFlag = 1 << (int)card::type::Action;
+    //constexpr auto   ct::Action = 1 << (int)card::type::Action;
     // mix-in card types
-    constexpr auto   AttackFlag = 1 << (int)card::type::Attack  ;
-    constexpr auto ReactionFlag = 1 << (int)card::type::Reaction;
+    //constexpr auto   AttackFlag = 1 << (int)card::type::Attack  ;
+    //constexpr auto Rect::Action = 1 << (int)card::type::Reaction;
 
-    decltype(card::type::next_i) card::type::next_i = 0;
-    card::type card::type()
-    : ei(next_i++)
-    {}
+    using ct = card::types;
+
+    decltype(card::types_vec) card::types_vec = {
+        ct::NONE,
+        ct::Action,
+        ct::Treasure,
+        ct::Victory,
+        ct::Curse,
+        ct::Attack,
+        ct::Reaction,
+    };
 
     card const
-        Curse{ 0, 1 << (int)card::type::Curse },
+        card::Curse{ 0, ct::Curse },
 
-        Copper{ 0, 1 << (int)card::type::Treasure },
-        Silver{ 3, 1 << (int)card::type::Treasure },
-        Gold  { 6, 1 << (int)card::type::Treasure },
+        card::Copper{ 0, ct::Treasure },
+        card::Silver{ 3, ct::Treasure },
+        card::Gold  { 6, ct::Treasure },
 
-        Estate  { 2, 1 << (int)card::type::Victory },
-        Duchy   { 5, 1 << (int)card::type::Victory },
-        Province{ 8, 1 << (int)card::type::Victory },
-        Gardens { 4, 1 << (int)card::type::Victory },
+        card::Estate  { 2, ct::Victory },
+        card::Duchy   { 5, ct::Victory },
+        card::Province{ 8, ct::Victory },
+        card::Gardens { 4, ct::Victory },
 
-        Artisan     { 6, ActionFlag },
-        Bandit      { 5, ActionFlag | AttackFlag },
-        Bureaucrat  { 4, ActionFlag | AttackFlag },
-        Cellar      { 2, ActionFlag },
-        Chapel      { 2, ActionFlag },
-        Council_Room{ 5, ActionFlag },
-        Festival    { 5, ActionFlag },
-        Harbinger   { 3, ActionFlag },
-        Laboratory  { 5, ActionFlag },
-        Library     { 5, ActionFlag },
-        Market      { 5, ActionFlag },
-        Merchant    { 3, ActionFlag },
-        Militia     { 4, ActionFlag | AttackFlag },
-        Mine        { 5, ActionFlag },
-        Moat        { 2, ActionFlag | ReactionFlag },
-        Moneylender { 4, ActionFlag },
-        Poacher     { 4, ActionFlag },
-        Remodel     { 4, ActionFlag },
-        Sentry      { 5, ActionFlag },
-        Smithy      { 4, ActionFlag },
-        Throne_Room { 4, ActionFlag },
-        Vassal      { 3, ActionFlag },
-        Village     { 3, ActionFlag },
-        Witch       { 5, ActionFlag | AttackFlag },
-        Workshop    { 3, ActionFlag },
+        card::Artisan     { 6, ct::Action                },
+        card::Bandit      { 5, ct::Action | ct::Attack   },
+        card::Bureaucrat  { 4, ct::Action | ct::Attack   },
+        card::Cellar      { 2, ct::Action                },
+        card::Chapel      { 2, ct::Action                },
+        card::Council_Room{ 5, ct::Action                },
+        card::Festival    { 5, ct::Action                },
+        card::Harbinger   { 3, ct::Action                },
+        card::Laboratory  { 5, ct::Action                },
+        card::Library     { 5, ct::Action                },
+        card::Market      { 5, ct::Action                },
+        card::Merchant    { 3, ct::Action                },
+        card::Militia     { 4, ct::Action | ct::Attack   },
+        card::Mine        { 5, ct::Action                },
+        card::Moat        { 2, ct::Action | ct::Reaction },
+        card::Moneylender { 4, ct::Action                },
+        card::Poacher     { 4, ct::Action                },
+        card::Remodel     { 4, ct::Action                },
+        card::Sentry      { 5, ct::Action                },
+        card::Smithy      { 4, ct::Action                },
+        card::Throne_Room { 4, ct::Action                },
+        card::Vassal      { 3, ct::Action                },
+        card::Village     { 3, ct::Action                },
+        card::Witch       { 5, ct::Action | ct::Attack   },
+        card::Workshop    { 3, ct::Action                },
 
-        Card{ 0, 0 };
+        card::Card{ 0, ct::NONE } /// hacky
+        ;
 
     decltype(card_tokens_map) card_tokens_map = makeBimap<card const*const>(
     {
-        { "card", &Card },
+        { "card", &card::Card },
 
-        { "Copper", &Copper },
-        { "Silver", &Silver },
-        { "Gold"  , &Gold   },
+        { "Copper", &card::Copper },
+        { "Silver", &card::Silver },
+        { "Gold"  , &card::Gold   },
 
-        { "Estate"  , &Estate   },
-        { "Duchy"   , &Duchy    },
-        { "Province", &Province },
-        { "Gardens" , &Gardens  },
+        { "Estate"  , &card::Estate   },
+        { "Duchy"   , &card::Duchy    },
+        { "Province", &card::Province },
+        { "Gardens" , &card::Gardens  },
 
-        { "Bandit"     , &Bandit      },
-        { "Bureaucrat" , &Bureaucrat  },
-        { "Cellar"     , &Cellar      },
-        { "Chapel"     , &Chapel      },
-        { "Festival"   , &Festival    },
-        { "Harbinger"  , &Harbinger   },
-        { "Laboratory" , &Laboratory  },
-        { "Library"    , &Library     },
-        { "Market"     , &Market      },
-        { "Merchant"   , &Merchant    },
-        { "Militia"    , &Militia     },
-        { "Moat"       , &Moat        },
-        { "Moneylender", &Moneylender },
-        { "Poacher"    , &Poacher     },
-        { "Remodel"    , &Remodel     },
-        { "Sentry"     , &Sentry      },
-        { "Smithy"     , &Smithy      },
-        { "Vassal"     , &Vassal      },
+        { "Bandit"     , &card::Bandit      },
+        { "Bureaucrat" , &card::Bureaucrat  },
+        { "Cellar"     , &card::Cellar      },
+        { "Chapel"     , &card::Chapel      },
+        { "Festival"   , &card::Festival    },
+        { "Harbinger"  , &card::Harbinger   },
+        { "Laboratory" , &card::Laboratory  },
+        { "Library"    , &card::Library     },
+        { "Market"     , &card::Market      },
+        { "Merchant"   , &card::Merchant    },
+        { "Militia"    , &card::Militia     },
+        { "Moat"       , &card::Moat        },
+        { "Moneylender", &card::Moneylender },
+        { "Poacher"    , &card::Poacher     },
+        { "Remodel"    , &card::Remodel     },
+        { "Sentry"     , &card::Sentry      },
+        { "Smithy"     , &card::Smithy      },
+        { "Vassal"     , &card::Vassal      },
     });
 
     decltype(singular) singular
