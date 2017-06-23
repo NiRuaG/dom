@@ -13,6 +13,8 @@ using std::string;
 #include <sstream>
 using std::stringstream;
 
+#include <boost\range.hpp>
+
 #include "gInc.h"
 #include "structs.h"
 #include "consts.h"
@@ -37,32 +39,33 @@ bool isVictoryCard(dominion::card_tokens c)
 }
 */
 
+
 unsigned short calc_VP(player_struct const& plyr)
 {
-    using ns = dominion::card;
+    using dominion::card;
 
     return_type_of<decltype(&calc_VP)> ret = 0;
 
     unsigned short gV = floor(plyr.cards_in_deck.size() / 10);
 
     auto
-    f = plyr.cards_in_deck.find(&ns::Estate  );
+    f = plyr.cards_in_deck.find(&card::Estate  );
     if (f != plyr.cards_in_deck.end())
         ret +=  1 * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Duchy   );
+    f = plyr.cards_in_deck.find(&card::Duchy   );
     if (f != plyr.cards_in_deck.end())
         ret +=  3 * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Province);
+    f = plyr.cards_in_deck.find(&card::Province);
     if (f != plyr.cards_in_deck.end())
         ret +=  6 * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Gardens );
+    f = plyr.cards_in_deck.find(&card::Gardens );
     if (f != plyr.cards_in_deck.end())
         ret += gV * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Curse   );
+    f = plyr.cards_in_deck.find(&card::Curse   );
     if (f != plyr.cards_in_deck.end())
         ret -= 1 * f->second;
 
@@ -71,20 +74,20 @@ unsigned short calc_VP(player_struct const& plyr)
 
 unsigned short calc_Trsr(player_struct const& plyr)
 {
-    using ns = dominion::card;
+    using dominion::card;
 
     return_type_of<decltype(&calc_Trsr)> ret = 0;
 
     auto
-    f = plyr.cards_in_deck.find(&ns::Copper);
+    f = plyr.cards_in_deck.find(&card::Copper);
     if (f != plyr.cards_in_deck.end())
         ret += 1 * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Silver);
+    f = plyr.cards_in_deck.find(&card::Silver);
     if (f != plyr.cards_in_deck.end())
         ret += 2 * f->second;
 
-    f = plyr.cards_in_deck.find(&ns::Gold  );
+    f = plyr.cards_in_deck.find(&card::Gold  );
     if (f != plyr.cards_in_deck.end())
         ret += 3 * f->second;
 
@@ -104,11 +107,14 @@ void print_summary() {
     cout << "\nPlayer decks:\n";
     for (auto const& p : THE_GAME.players_by_name)
     {
-        using ct = dominion::card::types;
+        using dominion::card;
+
+        using ut = std::underlying_type_t<card::type>; ///
+
 
         unsigned short tot_cards = 0;
         unsigned short tot_cost = 0;
-        std::map<ct, unsigned short> type_counts{};
+        std::map<card::type, unsigned short> type_counts{};
 
         cout << endl << setw(20) << p.first.substr(0,20);
 
@@ -117,10 +123,12 @@ void print_summary() {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
 
             tot_cost += c.first->cost * c.second;
-            for (auto const& i : dominion::card::types_vec)
+
+
+            for (auto const& i : range<card::type>(static_cast<card::type>(0), card::type::_END))
             {
                 type_counts[i] +=
-                    c.first->type.test(i) ? c.second : 0;
+                    c.first->types.test(i) ? c.second : 0;
             }
 
             tot_cards += c.second;
@@ -130,12 +138,12 @@ void print_summary() {
             << endl
             << "\n# of cards: " << tot_cards
             << std::right
-            << "\n# of Victory   cards: " << setw(2) << type_counts[ct::Victory ] << ", total value: " << calc_VP  (p.second)
-            << "\n# of Treasures cards: " << setw(2) << type_counts[ct::Treasure] << ", total value: " << calc_Trsr(p.second)
-            << "\n# of Actions   cards: " << setw(2) << type_counts[ct::Action  ]
-            << "\n# of Curse     cards: " << setw(2) << type_counts[ct::Curse   ]
-            << "\n# of Attack    cards: " << setw(2) << type_counts[ct::Attack  ]
-            << "\n# of Reaction  cards: " << setw(2) << type_counts[ct::Reaction]
+            << "\n# of Victory   cards: " << setw(2) << type_counts[card::type::Victory ] << ", total value: " << calc_VP  (p.second)
+            << "\n# of Treasures cards: " << setw(2) << type_counts[card::type::Treasure] << ", total value: " << calc_Trsr(p.second)
+            << "\n# of Actions   cards: " << setw(2) << type_counts[card::type::Action  ]
+            << "\n# of Curse     cards: " << setw(2) << type_counts[card::type::Curse   ]
+            << "\n# of Attack    cards: " << setw(2) << type_counts[card::type::Attack  ]
+            << "\n# of Reaction  cards: " << setw(2) << type_counts[card::type::Reaction]
             << std::left
             << "\n\ntotal cost of deck: " << tot_cost
             << endl;
