@@ -109,11 +109,10 @@ void print_summary() {
     {
         using dominion::card;
 
-        using ut = std::underlying_type_t<card::type>; ///
-
-
         unsigned short tot_cards = 0;
         unsigned short tot_cost = 0;
+        unsigned short num_cards_with_action = 0;
+        unsigned short tot_actions = 0;
         std::map<card::type, unsigned short> type_counts{};
 
         cout << endl << setw(20) << p.first.substr(0,20);
@@ -123,7 +122,9 @@ void print_summary() {
             cout << "\n\t" << setw(20) << dominion::card_tokens_map.right.at(c.first) << " " << c.second;
 
             tot_cost += c.first->cost * c.second;
-
+            
+            num_cards_with_action += (c.first->plus_actions() > 0) * c.second;
+            tot_actions += c.first->plus_actions() * c.second;
 
             for (auto const& i : range<card::type>(static_cast<card::type>(0), card::type::_END))
             {
@@ -144,8 +145,10 @@ void print_summary() {
             << "\n# of Curse     cards: " << setw(2) << type_counts[card::type::Curse   ]
             << "\n# of Attack    cards: " << setw(2) << type_counts[card::type::Attack  ]
             << "\n# of Reaction  cards: " << setw(2) << type_counts[card::type::Reaction]
-            << std::left
-            << "\n\ntotal cost of deck: " << tot_cost
+            << endl
+            << "\n# of +Action cards: " << setw(2) << num_cards_with_action << ", total +Actions: " << tot_actions
+            << endl << std::left
+            << "\ntotal cost of deck: " << tot_cost
             << endl;
     }
 
