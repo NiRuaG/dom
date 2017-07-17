@@ -98,7 +98,7 @@ namespace dominion {
             if (action_lines.back().verb == verb_tokens::Play
                 && (std::find_if(action_lines.back().cards.begin(), action_lines.back().cards.end(),
                     [](decltype(action_lines.back().cards)::value_type c) {
-                        return c.second->type.test(dominion::card::types::Treasure);
+                        return c.second->types.test(card::type::Treasure);
             })) != action_lines.back().cards.end()) {
                 trsr_line = action_lines.back();
                 action_lines.pop_back();

@@ -4,8 +4,11 @@
 #include "lib\BitFlag.h"
 
 namespace dominion {
+<<<<<<< HEAD
     using VP = short;
 
+=======
+>>>>>>> origin/master
     struct card {
         enum class type : uint8_t {
             Action=0,
@@ -20,9 +23,12 @@ namespace dominion {
         int cost;
         BitFlag<type> types;
 
+<<<<<<< HEAD
         VP VP() const;
 
         /// STATICS
+=======
+>>>>>>> origin/master
         // Cards
         static card const
             Curse,

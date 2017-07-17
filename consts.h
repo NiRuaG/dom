@@ -4,72 +4,10 @@
 #include <string>
 #include <boost\bimap.hpp>
 #include <bitset>
-#include <vector>
-#include "lib\BitFlag.h"
+
+#include "domcard.h"
 
 namespace dominion {
-    struct card {
-        enum class types : uint8_t {
-            NONE = 0,
-            Action,
-            Treasure,
-            Victory,
-            Curse,
-            Attack,
-            Reaction,
-            _END,
-        };
-
-        int cost;
-        BitFlag<types> type;
-
-        static std::vector<types> const types_vec;
-
-        // Cards
-        static card const
-            Curse,
-
-            Copper,
-            Silver,
-            Gold,
-
-            Estate,
-            Duchy,
-            Province,
-            Gardens,
-
-            Artisan,
-            Bandit,
-            Bureaucrat,
-            Cellar,
-            Chapel,
-            Council_Room,
-            Festival,
-            Harbinger,
-            Laboratory,
-            Library,
-            Market,
-            Merchant,
-            Militia,
-            Mine,
-            Moat,
-            Moneylender,
-            Poacher,
-            Remodel,
-            Sentry,
-            Smithy,
-            Throne_Room,
-            Vassal,
-            Village,
-            Witch,
-            Workshop,
-            // Objects
-            Card
-            ;
-
-        // object token, unused?
-        // Deck
-    };
 
     enum class verb_tokens {
         Buy,

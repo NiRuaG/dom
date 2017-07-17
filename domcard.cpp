@@ -1,4 +1,5 @@
 #include "domcard.h"
+<<<<<<< HEAD
 #include <map>
 
 namespace dominion {
@@ -30,6 +31,23 @@ namespace dominion {
 
     card const
         // Basic
+=======
+
+namespace dominion {
+    /// possible to make a constructor with static assert that these are in same order as enum?
+    /// or add methods to BitFlag to handle for range
+    /// or free function 'range' on BitFlag<T>
+    /*decltype(card::all_types) card::all_types = {
+        type::Action  ,
+        type::Treasure,
+        type::Victory ,
+        type::Curse   ,
+        type::Attack  ,
+        type::Reaction,
+    };*/
+
+    card const
+>>>>>>> origin/master
         card::Curse{ 0, type::Curse },
 
         card::Copper{ 0, type::Treasure },
@@ -39,9 +57,14 @@ namespace dominion {
         card::Estate  { 2, type::Victory },
         card::Duchy   { 5, type::Victory },
         card::Province{ 8, type::Victory },
+<<<<<<< HEAD
 
         // Kingdom
         card::Gardens     { 4, type::Victory },
+=======
+        card::Gardens { 4, type::Victory },
+
+>>>>>>> origin/master
         card::Artisan     { 6, type::Action                  },
         card::Bandit      { 5, type::Action | type::Attack   },
         card::Bureaucrat  { 4, type::Action | type::Attack   },
@@ -68,7 +91,11 @@ namespace dominion {
         card::Witch       { 5, type::Action | type::Attack   },
         card::Workshop    { 3, type::Action                  },
 
+<<<<<<< HEAD
         // Generic
         card::Card{ 0, {} }
+=======
+        card::Card{ 0,{} }
+>>>>>>> origin/master
     ;
 }

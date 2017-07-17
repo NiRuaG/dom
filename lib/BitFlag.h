@@ -3,7 +3,9 @@
 #include <bitset>
 #include <cassert>
 
-/// https://codereview.stackexchange.com/q/96146
+  ////////////////////////////////////////////////////
+ /// https://codereview.stackexchange.com/q/96146 ///
+////////////////////////////////////////////////////
 /**
 * BitFlag implements a bitset usable with `enum` and `enum class`.
 *
@@ -29,33 +31,29 @@ private:
 public:
     BitFlag() = default;
     BitFlag(BitFlag const& o) = default;
-    BitFlag(T const& t) : bitset(1 << static_cast<utype>(t)) {}
+    BitFlag(T const& t) : bitset(1i64 << static_cast<utype>(t)) {} /// explicit?
 
     auto test(const T& t) const -> decltype(bitset.test(static_cast<utype>(t)))
     { return bitset.test(static_cast<utype>(t)); }
 
-    BitFlag& operator|=(T const& val)
-    {
+    BitFlag& operator|=(T const& val) {
         bitset.set(static_cast<utype>(val));
         return *this;
     }
 
-    BitFlag& operator&=(T const& val)
-    {
+    BitFlag& operator&=(T const& val) {
         auto tmp = bitset.test(static_cast<utype>(val));
         bitset.reset();
         bitset.set(static_cast<utype>(val)) = tmp;
         return *this;
     }
 
-    BitFlag& operator|=(const BitFlag &o)
-    {
+    BitFlag& operator|=(const BitFlag &o) {
         bitset |= o.bitset;
         return *this;
     }
 
-    BitFlag& operator&=(const BitFlag &o)
-    {
+    BitFlag& operator&=(const BitFlag &o) {
         bitset &= o.bitset;
         return *this;
     }
@@ -68,8 +66,7 @@ public:
     *
     * The resulting bitset can contain at most 1 bit.
     */
-    BitFlag operator&(const T&val)
-    {
+    BitFlag operator&(T const& val) {
         BitFlag ret(*this);
         ret &= val;
 
@@ -81,8 +78,7 @@ public:
     * Perform a AND binary operation between *this and
     * `val` and return the result as a copy.
     */
-    BitFlag operator&(const BitFlag &val)
-    {
+    BitFlag operator&(BitFlag const& val) {
         BitFlag ret(*this);
         ret.bitset &= val.bitset;
 
@@ -95,7 +91,7 @@ public:
     *
     * The resulting bitset contains at least 1 bit.
     */
-    BitFlag operator|(const T&val)
+    BitFlag operator|(T const& val)
     {
         BitFlag ret(*this);
         ret |= val;
