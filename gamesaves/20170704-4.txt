@@ -1,0 +1,305 @@
+Game #4911389, unrated.
+
+S starts with 7 Coppers and 3 Estates.
+S shuffles their deck.
+S draws 5 cards.
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 3 Coppers and 2 Estates.
+
+Turn 1 - Sujak
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws 5 cards.
+
+Turn 1 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Vassal.
+N draws 4 Coppers and an Estate.
+
+Turn 2 - Sujak
+S plays 4 Coppers.
+S buys and gains a Poacher.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 2 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Silver.
+N shuffles their deck.
+N draws 3 Coppers and 2 Estates.
+
+Turn 3 - Sujak
+S plays a Silver and 3 Coppers.
+S buys and gains a Bandit.
+S draws 5 cards.
+
+Turn 3 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Vassal.
+N draws 3 Coppers, a Silver and a Vassal.
+
+Turn 4 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays 3 Coppers.
+S buys and gains a Poacher.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 4 - NiRuaG
+N plays a Vassal.
+N discards an Estate.
+N plays a Silver and 3 Coppers.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 3 Coppers, an Estate and a Vassal.
+
+Turn 5 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and an Estate.
+N discards a Copper and an Estate.
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws 5 cards.
+
+Turn 5 - NiRuaG
+N plays a Vassal.
+N discards an Estate.
+N plays 3 Coppers.
+N buys and gains a Sentry.
+N draws 2 Coppers, a Silver, a Gold and a Vassal.
+
+Turn 6 - Sujak
+S plays a Silver and 3 Coppers.
+S buys and gains a Bandit.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 6 - NiRuaG
+N plays a Vassal.
+N discards a Copper.
+N plays a Silver, a Gold and 2 Coppers.
+N buys and gains a Province.
+N shuffles their deck.
+N draws 5 Coppers.
+
+Turn 7 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Poacher.
+S draws a card.
+S plays a Bandit.
+S gains a Gold.
+N reveals an Estate and a Vassal.
+N discards an Estate and a Vassal.
+S plays 3 Coppers.
+S buys and gains a Sentry.
+S draws 5 cards.
+
+Turn 7 - NiRuaG
+N plays 5 Coppers.
+N buys and gains a Laboratory.
+N draws a Copper, a Gold, an Estate, a Province and a Vassal.
+
+Turn 8 - Sujak
+S plays a Gold, a Silver and 2 Coppers.
+S buys and gains a Gold.
+S draws 5 cards.
+
+Turn 8 - NiRuaG
+N plays a Vassal.
+N discards an Estate.
+N plays a Gold and a Copper.
+N buys and gains an Artisan.
+N shuffles their deck.
+N draws a Copper, a Silver, a Gold, an Artisan and a Sentry.
+
+Turn 9 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and an Estate.
+N discards a Copper and an Estate.
+S plays a Silver and 2 Coppers.
+S buys and gains a Poacher.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 9 - NiRuaG
+N plays a Sentry.
+N draws a Laboratory.
+N reveals a Province and a Vassal.
+N discards a Province.
+N topdecks a Vassal.
+N plays a Laboratory.
+N draws an Estate and a Vassal.
+N plays a Vassal.
+N discards a Copper.
+N plays a Gold, a Silver and a Copper.
+N buys and gains a Province.
+N draws 3 Coppers, an Estate and a Vassal.
+
+Turn 10 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Bandit.
+S gains a Gold.
+N shuffles their deck.
+N reveals a Copper and an Estate.
+N discards a Copper and an Estate.
+S plays a Gold and 3 Coppers.
+S buys and gains an Artisan.
+S draws 5 cards.
+
+Turn 10 - NiRuaG
+N plays a Vassal.
+N discards an Artisan.
+N plays an Artisan.
+N gains a Village.
+N topdecks a Village.
+N plays 3 Coppers.
+N buys and gains a Laboratory.
+N draws 2 Coppers, a Gold, a Province and a Village.
+
+Turn 11 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Poacher.
+S draws a card.
+S plays a Bandit.
+S gains a Gold.
+N reveals a Laboratory and a Vassal.
+N discards a Laboratory and a Vassal.
+S plays a Gold, a Silver and 2 Coppers.
+S buys and gains a Province.
+S draws 5 cards.
+
+Turn 11 - NiRuaG
+N plays a Village.
+N draws a Sentry.
+N plays a Sentry.
+N draws a Copper.
+N reveals a Silver and a Province.
+N discards a Province.
+N topdecks a Silver.
+N plays a Gold and 3 Coppers.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws a Copper, a Silver, a Gold, an Estate and a Laboratory.
+
+Turn 12 - Sujak
+S plays a Sentry.
+S draws a card.
+S reveals 2 cards.
+S trashes a Copper.
+S topdecks a card.
+S plays 2 Golds and a Silver.
+S buys and gains a Province.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 12 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Laboratory.
+N plays a Laboratory.
+N draws a Copper and an Estate.
+N plays a Gold, a Silver and 3 Coppers.
+N buys and gains a Province.
+N draws a Copper, an Estate, 2 Provinces and a Village.
+
+Turn 13 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and an Artisan.
+N discards a Copper and an Artisan.
+S plays a Silver, a Gold and a Copper.
+S buys and gains an Artisan.
+S draws 5 cards.
+
+Turn 13 - NiRuaG
+N plays a Village.
+N draws a Vassal.
+N plays a Vassal.
+N discards a Copper.
+N plays a Copper.
+N buys and gains a Cellar.
+N shuffles their deck.
+N draws a Copper, a Gold, a Laboratory, a Sentry and a Vassal.
+
+Turn 14 - Sujak
+S plays 3 Golds and a Copper.
+S buys and gains a Province.
+S draws 5 cards.
+
+Turn 14 - NiRuaG
+N plays a Sentry.
+N draws an Estate.
+N reveals a Cellar and a Vassal.
+N discards a Vassal.
+N topdecks a Cellar.
+N plays a Laboratory.
+N draws a Copper and a Cellar.
+N plays a Cellar.
+N discards an Estate.
+N draws a Gold.
+N plays a Vassal.
+N discards a Copper.
+N plays 2 Golds and 2 Coppers.
+N buys and gains a Province.
+N draws an Estate, 3 Provinces and a Village.
+
+Turn 15 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and a Laboratory.
+N discards a Copper and a Laboratory.
+S plays 2 Golds and a Copper.
+S buys and gains a Duchy.
+S draws 5 cards.
+
+Turn 15 - NiRuaG
+N plays a Village.
+N draws a Copper.
+N plays a Copper.
+N draws 2 Coppers, a Silver, an Estate and an Artisan.
+
+Turn 16 - Sujak
+S plays a Poacher.
+S draws a card.
+S plays a Poacher.
+S draws a card.
+S plays an Artisan.
+S gains a Laboratory.
+S topdecks a card.
+S plays 3 Coppers.
+S buys and gains a Duchy.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 16 - NiRuaG
+N plays an Artisan.
+N gains a Duchy.
+N topdecks a Silver.
+N plays 2 Coppers.
+N buys and gains an Estate.
+N shuffles their deck.
+N draws a Copper, a Silver, a Duchy, a Province and a Laboratory.
+
+Turn 17 - Sujak
+S plays a Laboratory.
+S draws 2 cards.
+S plays a Sentry.
+S draws a card.
+S reveals 2 cards.
+S trashes a Copper.
+S topdecks a card.
+S plays a Poacher.
+S draws a card.
+S plays 2 Silvers and a Gold.
+S buys and gains a Province.
+S draws a Copper, 2 Golds, an Estate and an Artisan.

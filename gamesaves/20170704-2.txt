@@ -1,0 +1,455 @@
+Game #4908278, unrated.
+
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 2 Coppers and 3 Estates.
+S starts with 7 Coppers and 3 Estates.
+S shuffles their deck.
+S draws 2 Coppers and 3 Estates.
+
+Turn 1 - NiRuaG
+N plays 2 Coppers.
+N buys and gains a Chapel.
+N draws 5 Coppers.
+
+Turn 1 - Sujak
+S plays 2 Coppers.
+S buys and gains a Moat.
+S draws 5 Coppers.
+
+Turn 2 - NiRuaG
+N plays 5 Coppers.
+N buys and gains a Witch.
+N shuffles their deck.
+N draws 2 Coppers, 2 Estates and a Chapel.
+
+Turn 2 - Sujak
+S plays 5 Coppers.
+S buys and gains a Mine.
+S shuffles their deck.
+S draws a Copper, 2 Estates, a Mine and a Moat.
+
+Turn 3 - NiRuaG
+N plays a Chapel.
+N trashes 2 Estates.
+N plays 2 Coppers.
+N buys and gains a Moat.
+N draws 3 Coppers, an Estate and a Witch.
+
+Turn 3 - Sujak
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays a Silver.
+S buys and gains a Chapel.
+S draws 4 Coppers and an Estate.
+
+Turn 4 - NiRuaG
+N plays a Witch.
+N draws 2 Coppers.
+S gains a Curse.
+N plays 5 Coppers.
+N buys and gains a Market.
+N shuffles their deck.
+N draws 2 Coppers, a Chapel, a Market and a Moat.
+
+Turn 4 - Sujak
+S plays 4 Coppers.
+S buys and gains a Moneylender.
+S shuffles their deck.
+S draws 2 Coppers, 2 Estates and a Mine.
+
+Turn 5 - NiRuaG
+N plays a Market.
+N draws a Witch.
+N plays a Witch.
+N draws 2 Coppers.
+S gains a Curse.
+N plays 4 Coppers.
+N buys and gains a Moneylender.
+N shuffles their deck.
+N draws 4 Coppers and an Estate.
+
+Turn 5 - Sujak
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays a Silver and a Copper.
+S buys and gains a Village.
+S draws 3 Coppers, a Silver and a Moat.
+
+Turn 6 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Moneylender.
+N draws 2 Coppers, a Chapel, a Market and a Moneylender.
+
+Turn 6 - Sujak
+S plays a Silver and 3 Coppers.
+S buys and gains a Witch.
+S draws a Curse, a Copper, an Estate, a Chapel and a Moneylender.
+
+Turn 7 - NiRuaG
+N plays a Market.
+N draws a Witch.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Copper.
+N buys and gains a Market.
+N shuffles their deck.
+N draws 3 Coppers, a Moat and a Witch.
+
+Turn 7 - Sujak
+S plays a Chapel.
+S trashes a Curse and an Estate.
+S plays a Copper.
+S shuffles their deck.
+S draws a Copper, a Silver, a Moat, a Moneylender and a Witch.
+
+Turn 8 - NiRuaG
+N plays a Witch.
+S reacts with a Moat.
+N draws 2 Coppers.
+N plays 5 Coppers.
+N buys and gains a Market.
+N draws an Estate, a Chapel, 2 Markets and a Moneylender.
+
+Turn 8 - Sujak
+S plays a Moneylender.
+S trashes a Copper.
+S plays a Silver.
+S buys and gains a Market.
+S draws a Curse, 2 Coppers, a Silver and a Chapel.
+
+Turn 9 - NiRuaG
+N plays a Market.
+N draws a Copper.
+N plays a Market.
+N draws a Moneylender.
+N plays a Moneylender.
+N trashes a Copper.
+N buys and gains a Silver and a Moat.
+N shuffles their deck.
+N draws an Estate, 3 Markets and a Moneylender.
+
+Turn 9 - Sujak
+S plays a Chapel.
+S trashes a Curse.
+S plays a Silver and 2 Coppers.
+S buys and gains a Smithy.
+S draws 2 Coppers, an Estate, a Mine and a Village.
+
+Turn 10 - NiRuaG
+N plays a Market.
+N draws a Moat.
+N plays a Market.
+N draws a Copper.
+N plays a Market.
+N draws a Copper.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Copper.
+N buys and gains a Gold.
+N draws 3 Coppers, a Moneylender and a Witch.
+
+Turn 10 - Sujak
+S plays a Village.
+S draws an Estate.
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays a Silver and a Copper.
+S buys and gains a Village.
+S shuffles their deck.
+S draws a Copper, an Estate, a Moneylender and 2 Villages.
+
+Turn 11 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays 2 Coppers.
+N buys and gains a Market.
+N shuffles their deck.
+N draws a Silver, a Chapel, a Market, a Moat and a Moneylender.
+
+Turn 11 - Sujak
+S plays a Village.
+S draws a Smithy.
+S plays a Smithy.
+S draws 2 Silvers and a Chapel.
+S plays a Village.
+S draws a Silver.
+S plays a Moneylender.
+S trashes a Copper.
+S plays a Chapel.
+S trashes an Estate.
+S plays 3 Silvers.
+S buys and gains a Province.
+S draws 2 Coppers, a Mine, a Moat and a Witch.
+
+Turn 12 - NiRuaG
+N plays a Market.
+N draws a Copper.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver.
+N buys and gains a Gold.
+N draws 2 Coppers, a Gold, an Estate and a Moat.
+
+Turn 12 - Sujak
+S plays a Witch.
+N reacts with a Moat.
+S draws an Estate and a Market.
+S plays 2 Coppers.
+S buys and gains a Chapel.
+S shuffles their deck.
+S draws a Silver, an Estate, a Chapel, a Village and a Witch.
+
+Turn 13 - NiRuaG
+N plays a Moat.
+N draws 2 Markets.
+N plays a Gold and 2 Coppers.
+N buys and gains a Market.
+N shuffles their deck.
+N draws a Copper, an Estate, a Market, a Moneylender and a Witch.
+
+Turn 13 - Sujak
+S plays a Village.
+S draws a Silver.
+S plays a Witch.
+S draws a Moneylender and a Village.
+N gains a Curse.
+S plays a Village.
+S draws a Copper.
+S plays a Moneylender.
+S trashes a Copper.
+S plays a Chapel.
+S trashes an Estate.
+S plays 2 Silvers.
+S buys and gains a Gold.
+S draws a Copper, a Silver, a Province, a Mine and a Moat.
+
+Turn 14 - NiRuaG
+N plays a Market.
+N draws a Silver.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver.
+N buys and gains 2 Villages.
+N draws a Copper, 2 Golds, a Market and a Moat.
+
+Turn 14 - Sujak
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays 2 Silvers.
+S buys and gains a Gardens.
+S shuffles their deck.
+S draws a Province, 2 Chapels, a Market and a Smithy.
+
+Turn 15 - NiRuaG
+N plays a Market.
+N draws a Market.
+N plays a Market.
+N draws a Market.
+N plays a Market.
+N draws a Market.
+N plays a Market.
+N draws a Moat.
+N plays a Moat.
+N draws a Chapel and a Moneylender.
+N plays 2 Golds and a Copper.
+N buys and gains a Silver and a Province.
+N shuffles their deck.
+N draws a Curse, a Silver, 2 Markets and a Witch.
+
+Turn 15 - Sujak
+S plays a Market.
+S draws a Moat.
+S plays a Smithy.
+S draws a Silver, a Gardens and a Witch.
+S plays a Silver.
+S buys and gains a Village.
+S draws a Silver, a Gold, a Mine and 2 Villages.
+
+Turn 16 - NiRuaG
+N plays a Market.
+N draws a Village.
+N plays a Village.
+N draws a Moat.
+N plays a Market.
+N draws a Copper.
+N plays a Witch.
+N draws a Moat and a Village.
+S gains a Curse.
+N plays a Village.
+N draws a Market.
+N plays a Market.
+N draws a Moneylender.
+N plays a Moat.
+N draws a Province and a Market.
+N plays a Market.
+N draws a Market.
+N plays a Market.
+N draws a Chapel.
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver.
+N buys and gains a Province and a Chapel.
+N draws a Silver, 2 Golds, an Estate and a Moneylender.
+
+Turn 16 - Sujak
+S plays a Village.
+S draws a Silver.
+S plays a Village.
+S draws a Moneylender.
+S plays a Mine.
+S trashes a Silver.
+S gains a Gold.
+S plays a Silver and 2 Golds.
+S buys and gains a Province.
+S shuffles their deck.
+S draws a Silver, a Gold, a Chapel, a Mine and a Witch.
+
+Turn 17 - NiRuaG
+N plays a Moneylender.
+N plays 2 Golds and a Silver.
+N buys and gains a Province.
+N shuffles their deck.
+N draws 2 Markets, a Moat and 2 Villages.
+
+Turn 17 - Sujak
+S plays a Mine.
+S trashes a Silver.
+S gains a Gold.
+S plays 2 Golds.
+S buys and gains a Duchy.
+S draws a Curse, a Silver, a Gold, a Chapel and a Village.
+
+Turn 18 - NiRuaG
+N plays a Village.
+N draws a Witch.
+N plays a Market.
+N draws a Gold.
+N plays a Village.
+N draws a Curse.
+N plays a Market.
+N draws a Market.
+N plays a Market.
+N draws a Province.
+N plays a Moat.
+N draws a Silver and an Estate.
+N plays a Witch.
+N draws a Province and a Market.
+S gains a Curse.
+N plays a Market.
+N draws a Moat.
+N plays a Moat.
+N draws a Silver and a Province.
+N plays a Gold and 2 Silvers.
+N buys and gains an Estate and a Province.
+N draws a Gold, a Chapel, a Market and 2 Moneylenders.
+
+Turn 18 - Sujak
+S plays a Village.
+S draws a Village.
+S plays a Village.
+S draws a Gardens.
+S plays a Chapel.
+S trashes a Curse.
+S plays a Silver and a Gold.
+S buys and gains a Duchy.
+S draws 2 Provinces, a Market, a Smithy and a Village.
+
+Turn 19 - NiRuaG
+N plays a Market.
+N draws a Chapel.
+N plays a Chapel.
+N trashes a Chapel and 2 Moneylenders.
+N plays a Gold.
+N buys and gains a Smithy.
+N shuffles their deck.
+N draws 2 Provinces, 2 Markets and a Village.
+
+Turn 19 - Sujak
+S plays a Village.
+S draws a Moneylender.
+S plays a Smithy.
+S shuffles their deck.
+S draws a Silver, a Gold and a Moat.
+S plays a Market.
+S draws a Witch.
+S plays a Witch.
+S draws a Duchy and a Village.
+N gains a Curse.
+S plays a Gold and a Silver.
+S buys and gains a Duchy.
+S draws a Curse, a Silver, 2 Golds and a Mine.
+
+Turn 20 - NiRuaG
+N plays a Market.
+N draws a Market.
+N plays a Village.
+N draws a Moat.
+N plays a Market.
+N draws a Gold.
+N plays a Market.
+N draws a Smithy.
+N plays a Smithy.
+N draws a Silver, an Estate and a Chapel.
+N plays a Moat.
+N draws an Estate and a Province.
+N plays a Gold and a Silver.
+N buys and gains a Province.
+N draws a Province, 2 Markets, a Moat and a Village.
+
+Turn 20 - Sujak
+S plays a Mine.
+S trashes a Silver.
+S gains a Gold.
+S plays 3 Golds.
+S buys and gains a Duchy.
+S draws a Duchy, 2 Chapels, a Gardens and a Village.
+
+Turn 21 - NiRuaG
+N plays a Village.
+N draws a Witch.
+N plays a Market.
+N draws a Curse.
+N plays a Market.
+N draws a Gold.
+N plays a Moat.
+N shuffles their deck.
+N draws a Curse and a Silver.
+N plays a Witch.
+N draws 2 Provinces.
+S gains a Curse.
+N plays a Gold and a Silver.
+N buys and gains an Estate and a Duchy.
+N draws an Estate, a Chapel, a Market, a Smithy and a Village.
+
+Turn 21 - Sujak
+S plays a Village.
+S shuffles their deck.
+S draws a Smithy.
+S plays a Smithy.
+S draws 2 Provinces and a Moneylender.
+S plays a Chapel.
+S trashes a Moneylender.
+S draws 2 Golds, a Market, a Mine and a Moat.
+
+Turn 22 - NiRuaG
+N plays a Village.
+N draws a Market.
+N plays a Market.
+N draws a Moat.
+N plays a Market.
+N draws a Province.
+N plays a Smithy.
+N draws a Gold, an Estate and a Market.
+N plays a Market.
+N draws a Silver.
+N plays a Moat.
+N shuffles their deck.
+N draws a Province and a Village.
+N plays a Gold and a Silver.
+N buys and gains a Province.
+N draws a Curse, a Silver, a Gold, a Province and a Market.

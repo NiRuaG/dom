@@ -1,0 +1,393 @@
+Game #4910661, unrated.
+
+S starts with 7 Coppers and 3 Estates.
+S shuffles their deck.
+S draws 3 Coppers and 2 Estates.
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 4 Coppers and an Estate.
+
+Turn 1 - Sujak
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws 4 Coppers and an Estate.
+
+Turn 1 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Moneylender.
+N draws 3 Coppers and 2 Estates.
+
+Turn 2 - Sujak
+S plays 4 Coppers.
+S buys and gains a Militia.
+S shuffles their deck.
+S draws 2 Coppers, 2 Estates and a Militia.
+
+Turn 2 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Silver.
+N shuffles their deck.
+N draws 3 Coppers and 2 Estates.
+
+Turn 3 - Sujak
+S plays a Militia.
+N discards 2 Estates.
+S plays 2 Coppers.
+S buys and gains a Militia.
+S draws 3 Coppers, a Silver and an Estate.
+
+Turn 3 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Silver.
+N draws 3 Coppers, a Silver and an Estate.
+
+Turn 4 - Sujak
+S plays a Silver and 3 Coppers.
+S buys and gains a Bandit.
+S shuffles their deck.
+S draws 4 Coppers and an Estate.
+
+Turn 4 - NiRuaG
+N plays a Silver and 3 Coppers.
+N buys and gains a Bandit.
+N shuffles their deck.
+N draws 2 Coppers, 2 Estates and a Moneylender.
+
+Turn 5 - Sujak
+S plays 4 Coppers.
+S buys and gains a Poacher.
+S draws a Copper, a Silver, an Estate, a Bandit and a Militia.
+
+Turn 5 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Copper.
+N buys and gains a Militia.
+N draws 3 Coppers, a Silver and a Bandit.
+
+Turn 6 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and an Estate.
+N discards a Copper and an Estate.
+S plays a Silver and a Copper.
+S buys and gains a Harbinger.
+S shuffles their deck.
+S draws 3 Coppers, an Estate and a Militia.
+
+Turn 6 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals a Harbinger and a Poacher.
+S discards a Harbinger and a Poacher.
+N plays a Silver and 3 Coppers.
+N buys and gains a Laboratory.
+N shuffles their deck.
+N draws 2 Coppers, a Silver, an Estate and a Moneylender.
+
+Turn 7 - Sujak
+S plays a Militia.
+N discards a Copper and an Estate.
+S plays 3 Coppers.
+S buys and gains a Laboratory.
+S draws 2 Coppers, a Gold, an Estate and a Bandit.
+
+Turn 7 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver.
+N buys and gains a Bandit.
+N draws a Copper, an Estate, a Bandit, a Laboratory and a Militia.
+
+Turn 8 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals a Copper and an Estate.
+N discards a Copper and an Estate.
+S plays a Gold and 2 Coppers.
+S buys and gains a Laboratory.
+S draws 2 Coppers, a Silver, an Estate and a Militia.
+
+Turn 8 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Gold.
+N plays a Militia.
+S discards a Copper and an Estate.
+N plays a Gold and a Copper.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 3 Coppers, a Silver and a Bandit.
+
+Turn 9 - Sujak
+S plays a Militia.
+N discards 2 Coppers.
+S plays a Silver and a Copper.
+S buys and gains a Bandit.
+S shuffles their deck.
+S draws a Copper, a Silver, a Bandit and 2 Militias.
+
+Turn 9 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals a Copper and a Gold.
+S trashes a Gold.
+S discards a Copper.
+N plays a Silver and a Copper.
+N buys and gains a Silver.
+N draws 2 Coppers, a Silver, a Bandit and a Moneylender.
+
+Turn 10 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals an Estate and a Militia.
+N discards an Estate and a Militia.
+S plays a Silver and a Copper.
+S buys and gains a Harbinger.
+S draws 3 Coppers, an Estate and a Laboratory.
+
+Turn 10 - NiRuaG
+N plays a Moneylender.
+N trashes a Copper.
+N plays a Silver and a Copper.
+N buys and gains a Gold.
+N draws 2 Golds, 2 Estates and a Laboratory.
+
+Turn 11 - Sujak
+S plays a Laboratory.
+S draws an Estate and a Bandit.
+S plays a Bandit.
+S gains a Gold.
+N shuffles their deck.
+N reveals a Gold and a Moneylender.
+N trashes a Gold.
+N discards a Moneylender.
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws a Copper, a Gold, an Estate, a Laboratory and a Poacher.
+
+Turn 11 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Militia.
+N plays a Militia.
+S discards a Copper and an Estate.
+N plays 2 Golds and a Copper.
+N buys and gains a Province.
+N draws a Copper, 2 Silvers, a Gold and a Bandit.
+
+Turn 12 - Sujak
+S plays a Laboratory.
+S draws a Copper and a Harbinger.
+S plays a Harbinger.
+S shuffles their deck.
+S draws a Gold.
+S plays a Poacher.
+S draws a Copper.
+S plays 2 Golds and 2 Coppers.
+S buys and gains a Province.
+S draws a Copper, an Estate, a Bandit, a Harbinger and a Militia.
+
+Turn 12 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals 2 Coppers.
+S discards 2 Coppers.
+N plays 2 Silvers, a Gold and a Copper.
+N buys and gains a Province.
+N draws 2 Coppers, a Silver, an Estate and a Bandit.
+
+Turn 13 - Sujak
+S plays a Harbinger.
+S draws an Estate.
+S looks at a Militia, 3 Provinces, 2 Harbingers, 3 Golds, a Silver, a Bandit, 3 Coppers, a Duchy, a Laboratory and a Poacher.
+S topdecks a Laboratory.
+S plays a Bandit.
+S gains a Gold.
+N shuffles their deck.
+N reveals a Silver and an Estate.
+N trashes a Silver.
+N discards an Estate.
+S plays a Copper.
+S draws 2 Coppers, a Silver, a Laboratory and a Militia.
+
+Turn 13 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals an Estate and a Bandit.
+S discards an Estate and a Bandit.
+N plays a Silver and 2 Coppers.
+N buys and gains a Poacher.
+N draws a Gold, an Estate, a Province, a Bandit and a Laboratory.
+
+Turn 14 - Sujak
+S plays a Laboratory.
+S draws a Silver and a Laboratory.
+S plays a Laboratory.
+S shuffles their deck.
+S draws a Gold and an Estate.
+S plays a Militia.
+N discards an Estate and a Province.
+S plays 2 Silvers, a Gold and 2 Coppers.
+S buys and gains a Province.
+S draws a Copper, 2 Golds, an Estate and a Poacher.
+
+Turn 14 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Gold.
+N plays a Bandit.
+N gains a Gold.
+S reveals an Estate and a Bandit.
+S discards an Estate and a Bandit.
+N plays 2 Golds and a Copper.
+N buys and gains a Library.
+N draws a Silver, a Gold, a Province, a Militia and a Moneylender.
+
+Turn 15 - Sujak
+S plays a Poacher.
+S draws a Copper.
+S plays 2 Golds and 2 Coppers.
+S buys and gains a Province.
+S draws 2 Coppers, a Gold, a Province and a Harbinger.
+
+Turn 15 - NiRuaG
+N plays a Militia.
+S discards a Copper and a Province.
+N plays a Gold and a Silver.
+N buys and gains a Laboratory.
+N shuffles their deck.
+N draws a Copper, a Silver, a Gold, a Laboratory and a Poacher.
+
+Turn 16 - Sujak
+S plays a Harbinger.
+S draws a Bandit.
+S looks at a Militia, 3 Provinces, 2 Harbingers, 3 Golds, a Silver, a Bandit, 3 Coppers, a Duchy, a Laboratory and a Poacher.
+S topdecks a Gold.
+S plays a Bandit.
+S gains a Gold.
+N reveals a Gold and a Library.
+N trashes a Gold.
+N discards a Library.
+S plays a Gold and a Copper.
+S buys and gains a Militia.
+S shuffles their deck.
+S draws a Copper, a Gold, an Estate, a Harbinger and a Militia.
+
+Turn 16 - NiRuaG
+N plays a Poacher.
+N draws a Copper.
+N plays a Laboratory.
+N draws a Province and a Militia.
+N plays a Militia.
+S discards a Copper and an Estate.
+N plays a Silver, a Gold and 2 Coppers.
+N buys and gains a Province.
+N draws 2 Golds, 2 Estates and a Bandit.
+
+Turn 17 - Sujak
+S plays a Harbinger.
+S draws an Estate.
+S looks at a Militia, 3 Provinces, 2 Harbingers, 3 Golds, a Silver, a Bandit, 3 Coppers, a Duchy, a Laboratory and a Poacher.
+S plays a Militia.
+N discards 2 Estates.
+S plays a Gold.
+S buys and gains a Duchy.
+S draws a Copper, 2 Silvers, a Province and a Laboratory.
+
+Turn 17 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals a Copper and a Harbinger.
+S discards a Copper and a Harbinger.
+N plays 2 Golds.
+N buys and gains a Duchy.
+N draws a Copper, a Silver, a Gold, an Estate and a Laboratory.
+
+Turn 18 - Sujak
+S plays a Laboratory.
+S draws a Province and a Militia.
+S plays a Militia.
+N discards a Copper and an Estate.
+S plays 2 Silvers and a Copper.
+S buys and gains a Duchy.
+S draws 2 Coppers, a Gold and 2 Bandits.
+
+Turn 18 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Province.
+N plays a Silver, a Gold and a Copper.
+N buys and gains a Duchy.
+N shuffles their deck.
+N draws a Gold, a Duchy, a Province, a Bandit and a Moneylender.
+
+Turn 19 - Sujak
+S plays a Bandit.
+S gains a Gold.
+N reveals 2 Golds.
+N trashes a Gold.
+N discards a Gold.
+S plays a Gold and 2 Coppers.
+S buys and gains a Duchy.
+S draws 2 Coppers, an Estate, a Province and a Laboratory.
+
+Turn 19 - NiRuaG
+N plays a Bandit.
+N gains a Gold.
+S reveals 2 Golds.
+S trashes a Gold.
+S discards a Gold.
+N plays a Gold.
+N buys and gains an Estate.
+N draws 2 Coppers, an Estate, a Province and a Laboratory.
+
+Turn 20 - Sujak
+S plays a Laboratory.
+S draws a Militia and a Poacher.
+S plays a Poacher.
+S draws a Gold.
+S plays a Militia.
+N discards an Estate and a Province.
+S plays a Gold and 2 Coppers.
+S buys and gains a Province.
+S shuffles their deck.
+S draws a Silver, a Gold, a Bandit, a Laboratory and a Poacher.
+
+Turn 20 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Gold.
+N plays a Gold and 3 Coppers.
+N buys and gains a Duchy.
+N draws a Silver, a Gold, a Laboratory, a Library and a Militia.
+
+Turn 21 - Sujak
+S plays a Laboratory.
+S draws a Copper and a Harbinger.
+S plays a Harbinger.
+S draws a Province.
+S plays a Poacher.
+S draws a Province.
+S plays a Bandit.
+S gains a Gold.
+N reveals a Province and a Poacher.
+N discards a Province and a Poacher.
+S plays a Gold, a Silver and a Copper.
+S buys and gains a Duchy.
+S draws 2 Coppers, a Gold, a Harbinger and a Militia.
+
+Turn 21 - NiRuaG
+N plays a Laboratory.
+N draws a Copper and a Gold.
+N plays a Militia.
+S discards 2 Coppers.
+N plays 2 Golds, a Silver and a Copper.
+N buys and gains a Duchy.
+N draws a Silver, 2 Estates, a Duchy and a Bandit.
+
+Turn 22 - Sujak
+S plays a Harbinger.
+S draws a Gold.
+S looks at a Militia, 3 Provinces, 2 Harbingers, 3 Golds, a Silver, a Bandit, 3 Coppers, a Duchy, a Laboratory and a Poacher.
+S topdecks a Gold.
+S plays a Militia.
+N discards 2 Estates.
+S plays 2 Golds.
+S buys and gains a Province.
+S draws 2 Coppers, a Gold, a Duchy and a Militia.

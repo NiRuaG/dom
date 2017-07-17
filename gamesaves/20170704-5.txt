@@ -1,0 +1,393 @@
+Game #4911648, unrated.
+
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 3 Coppers and 2 Estates.
+S starts with 7 Coppers and 3 Estates.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 1 - NiRuaG
+N plays 3 Coppers.
+N buys and gains a Vassal.
+N draws 4 Coppers and an Estate.
+
+Turn 1 - Sujak
+S plays 4 Coppers.
+S buys and gains a Bureaucrat.
+S draws 5 cards.
+
+Turn 2 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Bureaucrat.
+N shuffles their deck.
+N draws 2 Coppers, 2 Estates and a Bureaucrat.
+
+Turn 2 - Sujak
+S plays 3 Coppers.
+S buys and gains a Vassal.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 3 - NiRuaG
+N plays a Bureaucrat.
+N gains a Silver.
+S topdecks an Estate.
+N plays 2 Coppers.
+N buys and gains a Cellar.
+N draws 2 Coppers, a Silver, an Estate and a Vassal.
+
+Turn 3 - Sujak
+S plays 2 Coppers.
+S buys and gains a Cellar.
+S draws 5 cards.
+
+Turn 4 - NiRuaG
+N plays a Vassal.
+N discards a Copper.
+N plays a Silver and 2 Coppers.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 3 Coppers, a Bureaucrat and a Vassal.
+
+Turn 4 - Sujak
+S plays 4 Coppers.
+S buys and gains a Bureaucrat.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 5 - NiRuaG
+N plays a Vassal.
+N discards an Estate.
+N plays 3 Coppers.
+N buys and gains a Market.
+N draws 2 Coppers, a Gold, an Estate and a Cellar.
+
+Turn 5 - Sujak
+S plays a Cellar.
+S discards a Bureaucrat.
+S draws a card.
+S plays a Vassal.
+S discards an Estate.
+S plays 2 Coppers.
+S buys and gains a Silver.
+S draws 5 cards.
+
+Turn 6 - NiRuaG
+N plays a Cellar.
+N discards an Estate.
+N draws a Copper.
+N plays a Gold and 3 Coppers.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws 2 Coppers, a Silver and 2 Estates.
+
+Turn 6 - Sujak
+S plays 4 Coppers.
+S buys and gains a Vassal.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 7 - NiRuaG
+N plays a Silver and 2 Coppers.
+N buys and gains a Throne Room.
+N draws 2 Coppers, a Gold, a Cellar and a Market.
+
+Turn 7 - Sujak
+S plays a Vassal.
+S discards a Vassal.
+S plays a Vassal.
+S discards an Estate.
+S plays a Silver and a Copper.
+S buys and gains a Gold.
+S draws 5 cards.
+
+Turn 8 - NiRuaG
+N plays a Market.
+N draws a Gold.
+N plays a Cellar.
+N discards 2 Coppers.
+N draws a Copper and a Vassal.
+N plays a Vassal.
+N discards a Bureaucrat.
+N plays a Bureaucrat.
+N gains a Silver.
+S topdecks an Estate.
+N plays 2 Golds and a Copper.
+N buys and gains a Province and a Cellar.
+N shuffles their deck.
+N draws 2 Coppers, a Silver, an Estate and a Vassal.
+
+Turn 8 - Sujak
+S plays a Bureaucrat.
+S gains a Silver.
+N topdecks an Estate.
+S plays 3 Coppers.
+S buys and gains a Merchant.
+S draws 5 cards.
+
+Turn 9 - NiRuaG
+N plays a Vassal.
+N discards an Estate.
+N plays a Silver and 2 Coppers.
+N buys and gains a Gold.
+N draws 3 Coppers, a Province and a Cellar.
+
+Turn 9 - Sujak
+S plays a Cellar.
+S discards an Estate.
+S draws a card.
+S plays a Silver and 3 Coppers.
+S buys and gains a Market.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 10 - NiRuaG
+N plays a Cellar.
+N discards 3 Coppers and a Province.
+N draws 2 Coppers and 2 Estates.
+N plays 2 Coppers.
+N buys and gains a Cellar.
+N draws a Silver, a Gold, a Bureaucrat, a Cellar and a Throne Room.
+
+Turn 10 - Sujak
+S plays a Vassal.
+S discards a Merchant.
+S plays a Merchant.
+S draws a card.
+S plays a Bureaucrat.
+S gains a Silver.
+N reveals a Province, an Estate, a Bureaucrat, a Cellar and a Copper.
+S plays 2 Coppers.
+S buys and gains a Silver.
+S draws 5 cards.
+
+Turn 11 - NiRuaG
+N plays a Throne Room.
+N plays a Cellar.
+N discards a Bureaucrat.
+N draws a Market.
+N plays a Cellar again.
+N plays a Market.
+N draws a Gold.
+N plays a Silver and 2 Golds.
+N buys and gains a Province.
+N shuffles their deck.
+N draws 2 Coppers, a Gold, an Estate and a Market.
+
+Turn 11 - Sujak
+S plays a Silver and 4 Coppers.
+S buys and gains a Gold.
+S draws 5 cards.
+
+Turn 12 - NiRuaG
+N plays a Market.
+N draws a Copper.
+N plays a Gold and 3 Coppers.
+N buys and gains a Cellar and a Laboratory.
+N draws a Copper, a Silver, a Gold, an Estate and a Vassal.
+
+Turn 12 - Sujak
+S plays a Cellar.
+S discards an Estate.
+S draws a card.
+S plays a Market.
+S draws a card.
+S plays a Vassal.
+S discards a Silver.
+S plays a Silver and a Copper.
+S buys and gains a Gold.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 13 - NiRuaG
+N plays a Vassal.
+N discards a Copper.
+N plays a Gold, a Silver and a Copper.
+N buys and gains a Province.
+N draws a Silver, a Gold, a Province, a Cellar and a Throne Room.
+
+Turn 13 - Sujak
+S plays a Merchant.
+S draws a card.
+S plays a Cellar.
+S plays a Gold and 3 Coppers.
+S buys and gains a Gold.
+S draws 5 cards.
+
+Turn 14 - NiRuaG
+N plays a Throne Room.
+N plays a Cellar.
+N discards a Province.
+N draws an Estate.
+N plays a Cellar again.
+N discards an Estate.
+N draws a Province.
+N plays a Gold and a Silver.
+N buys and gains a Market.
+N draws 2 Coppers, a Bureaucrat and 2 Cellars.
+
+Turn 14 - Sujak
+S plays a Vassal.
+S discards an Estate.
+S plays a Silver.
+S buys and gains a Cellar.
+S draws 5 cards.
+
+Turn 15 - NiRuaG
+N plays a Cellar.
+N discards 2 Coppers and a Bureaucrat.
+N shuffles their deck.
+N draws a Copper, a Gold and a Cellar.
+N plays a Cellar.
+N discards a Copper.
+N draws a Silver.
+N plays a Gold and a Silver.
+N buys and gains a Laboratory.
+N draws 2 Coppers, a Silver, a Gold and a Bureaucrat.
+
+Turn 15 - Sujak
+S plays a Market.
+S draws a card.
+S plays a Bureaucrat.
+S gains a Silver.
+N reveals a Province, an Estate, a Bureaucrat, a Cellar and a Copper.
+S plays a Gold, a Silver and 2 Coppers.
+S buys and gains a Province.
+S draws 5 cards.
+
+Turn 16 - NiRuaG
+N plays a Bureaucrat.
+N gains a Silver.
+S reveals an Estate.
+N plays a Silver, a Gold and 2 Coppers.
+N buys and gains a Gold.
+N draws a Copper, a Silver, a Province, a Cellar and a Market.
+
+Turn 16 - Sujak
+S plays a Gold, 2 Silvers and 2 Coppers.
+S buys and gains a Province.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 17 - NiRuaG
+N plays a Market.
+N draws a Copper.
+N plays a Cellar.
+N discards 2 Coppers and a Province.
+N draws a Gold, a Province and a Throne Room.
+N plays a Silver and a Gold.
+N buys and gains an Estate and a Gardens.
+N draws 3 Estates, a Laboratory and a Market.
+
+Turn 17 - Sujak
+S plays a Merchant.
+S draws a card.
+S plays a Vassal.
+S discards a Copper.
+S plays a Gold, a Silver and a Copper.
+S buys and gains a Province.
+S draws 5 cards.
+
+Turn 18 - NiRuaG
+N plays a Market.
+N draws a Copper.
+N plays a Laboratory.
+N draws a Province and a Vassal.
+N plays a Vassal.
+N discards a Copper.
+N plays a Copper.
+N buys and gains 2 Cellars.
+N shuffles their deck.
+N draws a Copper, an Estate, a Province, a Bureaucrat and a Cellar.
+
+Turn 18 - Sujak
+S plays a Cellar.
+S discards a card and a Copper.
+S draws 2 cards.
+S plays a Silver, a Gold and a Copper.
+S buys and gains a Duchy.
+S draws 5 cards.
+
+Turn 19 - NiRuaG
+N plays a Cellar.
+N discards a Copper, an Estate, a Province and a Bureaucrat.
+N draws a Silver, a Gold, an Estate and a Laboratory.
+N plays a Laboratory.
+N draws a Silver and a Province.
+N plays a Gold and 2 Silvers.
+N buys and gains a Duchy.
+N draws 2 Coppers, 2 Cellars and a Vassal.
+
+Turn 19 - Sujak
+S plays a Vassal.
+S discards a Silver.
+S plays 2 Coppers.
+S buys and gains a Cellar.
+S draws 5 cards.
+
+Turn 20 - NiRuaG
+N plays a Cellar.
+N discards 2 Coppers.
+N draws a Gold and a Province.
+N plays a Cellar.
+N discards a Province.
+N draws a Copper.
+N plays a Vassal.
+N discards a Copper.
+N plays a Gold and a Copper.
+N buys and gains a Duchy.
+N draws a Copper, a Silver, an Estate, a Cellar and a Gardens.
+
+Turn 20 - Sujak
+S plays a Market.
+S draws a card.
+S plays a Bureaucrat.
+S gains a Silver.
+N topdecks a Gardens.
+S plays 2 Silvers and 2 Golds.
+S buys and gains a Province and a Merchant.
+S shuffles their deck.
+S draws 5 cards.
+
+Turn 21 - NiRuaG
+N plays a Cellar.
+N discards a Copper and an Estate.
+N draws a Gold and a Gardens.
+N plays a Silver and a Gold.
+N buys and gains a Duchy.
+N draws a Copper, a Cellar, a Laboratory, a Market and a Throne Room.
+
+Turn 21 - Sujak
+S plays a Cellar.
+S discards a card and a Copper.
+S draws 2 cards.
+S plays a Bureaucrat.
+S gains a Silver.
+N reveals a Throne Room, a Cellar, a Copper, a Market and a Laboratory.
+S plays 2 Silvers.
+S buys and gains a Gardens.
+S draws 5 cards.
+
+Turn 22 - NiRuaG
+N plays a Throne Room.
+N plays a Laboratory.
+N draws a Cellar and a Market.
+N plays a Laboratory again.
+N draws a Gold and an Estate.
+N plays a Market.
+N shuffles their deck.
+N draws a Vassal.
+N plays a Market.
+N draws a Copper.
+N plays a Cellar.
+N discards 2 Coppers and an Estate.
+N draws a Silver, a Gold and a Cellar.
+N plays a Cellar.
+N discards a Cellar.
+N draws a Silver.
+N plays a Vassal.
+N discards a Gardens.
+N plays 2 Golds and 2 Silvers.
+N buys and gains a Duchy and a Province.
+N draws a Copper, a Gold, 2 Duchies and a Bureaucrat.

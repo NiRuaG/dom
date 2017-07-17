@@ -1,0 +1,435 @@
+﻿Game #4907749, unrated.
+
+N starts with 7 Coppers and 3 Estates.
+N shuffles their deck.
+N draws 5 Coppers.
+S starts with 7 Coppers and 3 Estates.
+S shuffles their deck.
+S draws 3 Coppers and 2 Estates.
+
+Turn 1 - NiRuaG
+N plays 5 Coppers.
+N buys and gains a Witch.
+N draws 2 Coppers and 3 Estates.
+
+Turn 1 - Sujak
+S plays 3 Coppers.
+S buys and gains a Harbinger.
+S draws 4 Coppers and an Estate.
+
+Turn 2 - NiRuaG
+N plays 2 Coppers.
+N buys and gains a Moat.
+N shuffles their deck.
+N draws 4 Coppers and an Estate.
+
+Turn 2 - Sujak
+S plays 4 Coppers.
+S buys and gains a Remodel.
+S shuffles their deck.
+S draws 2 Coppers, an Estate, a Harbinger and a Remodel.
+
+Turn 3 - NiRuaG
+N plays 4 Coppers.
+N buys and gains a Poacher.
+N draws a Copper, 2 Estates, a Moat and a Witch.
+
+Turn 3 - Sujak
+S plays a Harbinger.
+S draws a Copper.
+S plays a Remodel.
+S trashes an Estate.
+S gains a Poacher.
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws 3 Coppers and 2 Estates.
+
+Turn 4 - NiRuaG
+N plays a Witch.
+N draws 2 Coppers.
+S gains a Curse.
+N plays 3 Coppers.
+N buys and gains a Silver.
+N shuffles their deck.
+N draws 3 Coppers, an Estate and a Witch.
+
+Turn 4 - Sujak
+S plays 3 Coppers.
+S buys and gains a Moat.
+S shuffles their deck.
+S draws 2 Coppers, an Estate, a Moat and a Poacher.
+
+Turn 5 - NiRuaG
+N plays a Witch.
+S reacts with a Moat.
+N draws a Copper and an Estate.
+N plays 4 Coppers.
+N buys and gains a Poacher.
+N draws 2 Coppers, a Silver, an Estate and a Poacher.
+
+Turn 5 - Sujak
+S plays a Poacher.
+S draws a Copper.
+S plays a Moat.
+S draws a Harbinger and a Remodel.
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws a Curse, 2 Coppers, a Silver and an Estate.
+
+Turn 6 - NiRuaG
+N plays a Poacher.
+N draws a Moat.
+N plays a Moat.
+N shuffles their deck.
+N draws a Copper and an Estate.
+N plays a Silver and 3 Coppers.
+N buys and gains a Gold.
+N draws 2 Coppers, an Estate, a Poacher and a Witch.
+
+Turn 6 - Sujak
+S plays a Silver and 2 Coppers.
+S buys and gains a Silver.
+S shuffles their deck.
+S draws 3 Coppers and 2 Estates.
+
+Turn 7 - NiRuaG
+N plays a Poacher.
+N draws a Copper.
+N plays a Witch.
+N shuffles their deck.
+N draws 2 Coppers.
+S gains a Curse.
+N plays 5 Coppers.
+N buys and gains a Gold.
+N draws 2 Coppers, a Gold, an Estate and a Moat.
+
+Turn 7 - Sujak
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws 3 Coppers, a Moat and a Remodel.
+
+Turn 8 - NiRuaG
+N plays a Moat.
+N draws an Estate and a Poacher.
+N plays a Gold and 2 Coppers.
+N buys and gains a Sentry.
+N shuffles their deck.
+N draws a Copper, a Silver, 2 Golds and a Poacher.
+
+Turn 8 - Sujak
+S plays a Moat.
+S draws a Curse and a Poacher.
+S plays 3 Coppers.
+S buys and gains a Silver.
+S draws a Copper, 3 Silvers and a Harbinger.
+
+Turn 9 - NiRuaG
+N plays a Poacher.
+N draws a Poacher.
+N plays a Poacher.
+N draws a Copper.
+N plays 2 Golds, a Silver and 2 Coppers.
+N buys and gains a Province.
+N draws 3 Coppers, a Sentry and a Witch.
+
+Turn 9 - Sujak
+S plays a Harbinger.
+S shuffles their deck.
+S draws a Remodel.
+S plays a Remodel.
+S trashes a Silver.
+S gains a Mine.
+S plays 2 Silvers and a Copper.
+S buys and gains a Sentry.
+S draws a Copper, a Silver, an Estate, a Moat and a Poacher.
+
+Turn 10 - NiRuaG
+N plays a Sentry.
+N draws an Estate.
+N reveals a Copper and an Estate.
+N trashes a Copper.
+N discards an Estate.
+N plays a Witch.
+S reacts with a Moat.
+N draws a Copper and a Moat.
+N plays 4 Coppers.
+N buys and gains a Poacher.
+N shuffles their deck.
+N draws 3 Coppers, a Silver and an Estate.
+
+Turn 10 - Sujak
+S plays a Poacher.
+S draws a Copper.
+S plays a Silver and 2 Coppers.
+S buys and gains a Sentry.
+S draws 2 Curses, a Copper, a Silver and an Estate.
+
+Turn 11 - NiRuaG
+N plays a Silver and 3 Coppers.
+N buys and gains a Witch.
+N draws 3 Coppers, a Province and a Moat.
+
+Turn 11 - Sujak
+S plays a Silver and a Copper.
+S buys and gains a Village.
+S shuffles their deck.
+S draws a Curse, 3 Coppers and a Silver.
+
+Turn 12 - NiRuaG
+N plays a Moat.
+N draws 2 Poachers.
+N plays 3 Coppers.
+N buys and gains a Village.
+N draws 2 Golds, an Estate, a Sentry and a Witch.
+
+Turn 12 - Sujak
+S plays a Silver and 3 Coppers.
+S buys and gains a Sentry.
+S draws a Copper, a Poacher, a Remodel and 2 Sentries.
+
+Turn 13 - NiRuaG
+N plays a Sentry.
+N draws a Poacher.
+N shuffles their deck.
+N reveals a Copper and an Estate.
+N trashes a Copper.
+N discards an Estate.
+N plays a Witch.
+N draws a Poacher and a Witch.
+S gains a Curse.
+N plays 2 Golds.
+N buys and gains a Gold.
+N draws 3 Coppers, a Province and a Moat.
+
+Turn 13 - Sujak
+S plays a Poacher.
+S draws a Copper.
+S plays a Sentry.
+S draws a Silver.
+S reveals a Silver and an Estate.
+S trashes an Estate.
+S topdecks a Silver.
+S plays a Sentry.
+S draws a Silver.
+S reveals a Copper and a Silver.
+S trashes a Copper.
+S topdecks a Silver.
+S plays a Remodel.
+S trashes a Copper.
+S gains a Moat.
+S plays 2 Silvers and a Copper.
+S buys and gains a Gold.
+S draws a Curse, a Copper, a Silver, a Harbinger and a Moat.
+
+Turn 14 - NiRuaG
+N plays a Moat.
+N draws an Estate and a Village.
+N plays 3 Coppers.
+N buys and gains a Silver.
+N shuffles their deck.
+N draws 2 Coppers, a Silver, a Poacher and a Witch.
+
+Turn 14 - Sujak
+S plays a Harbinger.
+S draws a Mine.
+S looks at 2 Silvers, a Sentry, 2 Duchies, 3 Curses and a Copper.
+S topdecks a Sentry.
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays 2 Silvers.
+S buys and gains a Poacher.
+S shuffles their deck.
+S draws a Curse, an Estate, a Harbinger, a Sentry and a Village.
+
+Turn 15 - NiRuaG
+N plays a Poacher.
+N draws a Village.
+N plays a Village.
+N draws a Witch.
+N plays a Witch.
+N draws a Copper and an Estate.
+S gains a Curse.
+N plays a Witch.
+N draws a Gold and a Moat.
+S gains a Curse.
+N plays a Gold, a Silver and 3 Coppers.
+N buys and gains a Province.
+N draws a Copper, a Silver, 2 Golds and a Poacher.
+
+Turn 15 - Sujak
+S plays a Sentry.
+S draws a Sentry.
+S reveals 2 Coppers.
+S trashes a Copper.
+S topdecks a Copper.
+S plays a Sentry.
+S draws a Copper.
+S reveals 2 Silvers.
+S topdecks 2 Silvers.
+S plays a Village.
+S draws a Silver.
+S plays a Harbinger.
+S draws a Silver.
+S looks at 2 Silvers, a Sentry, 2 Duchies, 3 Curses and a Copper.
+S plays 2 Silvers and a Copper.
+S buys and gains a Sentry.
+S draws a Curse, a Copper, a Silver, a Moat and a Poacher.
+
+Turn 16 - NiRuaG
+N plays a Poacher.
+N draws an Estate.
+N plays 2 Golds, a Silver and a Copper.
+N buys and gains a Province.
+N draws a Copper, an Estate, a Province, a Poacher and a Sentry.
+
+Turn 16 - Sujak
+S plays a Poacher.
+S draws a Mine.
+S plays a Mine.
+S trashes a Copper.
+S gains a Silver.
+S plays 2 Silvers.
+S buys and gains a Duchy.
+S draws a Copper, a Silver, a Poacher, a Remodel and a Sentry.
+
+Turn 17 - NiRuaG
+N plays a Sentry.
+N shuffles their deck.
+N draws a Witch.
+N reveals 2 Coppers.
+N trashes 2 Coppers.
+N plays a Poacher.
+N draws an Estate.
+N plays a Witch.
+N draws a Gold and a Village.
+S gains a Curse.
+N plays a Gold and a Copper.
+N buys and gains a Remodel.
+N draws a Copper, 2 Silvers, a Gold and a Province.
+
+Turn 17 - Sujak
+S plays a Sentry.
+S draws a Gold.
+S reveals a Curse and a Moat.
+S trashes a Curse.
+S topdecks a Moat.
+S plays a Poacher.
+S draws a Moat.
+S plays a Remodel.
+S trashes a Gold.
+S gains a Province.
+S plays a Silver and a Copper.
+S buys and gains a Remodel.
+S shuffles their deck.
+S draws a Silver, an Estate, a Province, a Mine and a Sentry.
+
+Turn 18 - NiRuaG
+N plays a Gold, 2 Silvers and a Copper.
+N buys and gains a Province.
+N draws an Estate, a Province, 2 Poachers and a Witch.
+
+Turn 18 - Sujak
+S plays a Sentry.
+S draws a Moat.
+S reveals a Curse and a Sentry.
+S trashes a Curse.
+S topdecks a Sentry.
+S plays a Moat.
+S draws a Curse and a Sentry.
+S plays a Silver.
+S buys and gains a Moat.
+S draws a Curse, a Silver, a Harbinger, a Poacher and a Village.
+
+Turn 19 - NiRuaG
+N plays a Poacher.
+N draws a Gold.
+N plays a Poacher.
+N draws a Copper.
+N plays a Witch.
+N shuffles their deck.
+N draws a Silver and a Moat.
+S gains a Curse.
+N plays a Gold, a Silver and a Copper.
+N buys and gains a Province.
+N draws a Copper, a Gold, an Estate, a Poacher and a Witch.
+
+Turn 19 - Sujak
+S plays a Village.
+S draws a Sentry.
+S plays a Sentry.
+S draws a Silver.
+S reveals a Copper and a Sentry.
+S trashes a Copper.
+S topdecks a Sentry.
+S plays a Harbinger.
+S draws a Sentry.
+S looks at 2 Silvers, a Sentry, 2 Duchies, 3 Curses and a Copper.
+S topdecks a Sentry.
+S plays a Poacher.
+S draws a Sentry.
+S plays 2 Silvers.
+S buys and gains a Duchy.
+S draws a Curse, a Copper and 3 Silvers.
+
+Turn 20 - NiRuaG
+N plays a Poacher.
+N draws a Village.
+N plays a Village.
+N draws a Remodel.
+N plays a Witch.
+N draws a Province and a Sentry.
+S gains a Curse.
+N plays a Sentry.
+N draws an Estate.
+N reveals a Silver and a Gold.
+N topdecks a Silver and a Gold.
+N plays a Remodel.
+N trashes a Gold.
+N gains a Province.
+N plays a Copper.
+N draws a Copper, a Silver, a Gold and 2 Provinces.
+
+Turn 20 - Sujak
+S plays 3 Silvers and a Copper.
+S buys and gains a Gold.
+S draws a Curse, a Duchy, a Moat, a Poacher and a Remodel.
+
+Turn 21 - NiRuaG
+N plays a Gold, a Silver and a Copper.
+N buys and gains a Gold.
+N shuffles their deck.
+N draws a Silver, an Estate, 2 Provinces and a Witch.
+
+Turn 21 - Sujak
+S plays a Poacher.
+S draws a Remodel.
+S plays a Remodel.
+S trashes a Curse.
+S gains a Moat.
+S shuffles their deck.
+S draws 2 Curses, 2 Silvers and a Sentry.
+
+Turn 22 - NiRuaG
+N plays a Witch.
+N draws a Province and a Moat.
+S gains a Curse.
+N plays a Silver.
+N draws a Copper, a Gold, an Estate, a Province and a Remodel.
+
+Turn 22 - Sujak
+S plays a Sentry.
+S draws a Copper.
+S reveals a Silver and a Duchy.
+S discards a Duchy.
+S topdecks a Silver.
+S plays 2 Silvers and a Copper.
+S buys and gains a Duchy.
+S draws 2 Curses, a Silver, a Harbinger and a Poacher.
+
+Turn 23 - NiRuaG
+N plays a Remodel.
+N trashes a Gold.
+N gains a Province.
+N plays a Copper.
+N draws a Gold, an Estate, a Province, a Poacher and a Sentry.
